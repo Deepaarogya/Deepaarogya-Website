@@ -3,14 +3,13 @@ import Paper from '@mui/material/Paper';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
 import { styled } from '@mui/material/styles';
-import team1 from '../images/WhatsApp_Image_2023-02-11_at_22.50.25-removebg-preview.png';
-import team3 from '../images/WhatsApp Image 2023-02-11 at 22.55.22.jpeg';
-import team4 from '../images/WhatsApp Image 2023-02-11 at 22.55.23.jpeg';
+import team1 from '../images/pandey.png';
+import team3 from '../images/akash.jpeg';
+import team4 from '../images/himanshu.jpeg';
 import team5 from '../images/mayank.jpeg';
-import team2 from '../images/Screenshot 2023-02-03 at 16-48-31 gopichand metoomilk - Google Search.png';
+import team2 from '../images/gopi.png';
 import Stack from '@mui/material/Stack';
 import HeightBox from './heightBox';
 const Item = styled(Paper)(({ theme }) => ({
@@ -74,7 +73,7 @@ export default function Team(){
                         <CardMedia
                             component="img"
                             height="194"
-                            image={team4}
+                            image={team3}
                             alt="Paella dish"
                             style={{borderRadius:10}}
                         />
@@ -91,7 +90,7 @@ export default function Team(){
                         <CardMedia
                             component="img"
                             height="194"
-                            image={team3}
+                            image={team4}
                             alt="Paella dish"
                             style={{borderRadius:10}}
                         />
