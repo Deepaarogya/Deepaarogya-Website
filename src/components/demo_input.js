@@ -3,7 +3,11 @@ import FormControl from "@material-ui/core/FormControl";
 import CloudUploadOutlinedIcon from '@mui/icons-material/CloudUploadOutlined';
 import Stack from "@mui/material/Stack";
 import Avatar from '@mui/material/Avatar';
-import clsx from "clsx";
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
+import { apikey, apisecret, apiurl } from "../config/cred";
+import axios from 'axios';
+import HeightBox from "./heightBox";
 
 var style = {
     uploadIcon:{
@@ -40,26 +44,68 @@ var style = {
 
 export default function DemoInput() {
     const hiddenFileInput = React.useRef(null);
-    const [fileName, setFileName] = React.useState('');
+    const [fileName, setFileName] = React.useState(null);
+    const [file, setFile] = React.useState(null);
+    const [image, setImage] = React.useState(null);
+    const [error, setError] = React.useState(null);
+    const [response, setResponse] = React.useState(null);
+    const [isLoading, setLoading] = React.useState(false);
     const handleInputClick = event => {
         hiddenFileInput.current.click();
     };
-    const handleFile = (file) =>{
-        setFileName(file.name);
+    const handleFile = (image) =>{
+        setFileName(image.name);
+        setFile(image);
+        setImage(URL.createObjectURL(image));
+        setResponse('');
     }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setError('');
+        if(fileName!==null){
+            const headers = {
+                'Access-Control-Allow-Origin': '*',
+                'Content-Type': 'multipart/form-data',
+            }
+           
+            axios({
+                method:'post',
+                headers:headers,
+                url:apiurl,
+                data:{
+                    file:file
+                }
+            })
+            .then((res) => {
+                setResponse(res.data.predictions);
+                setLoading(false);
+            })
+            .catch((error) => {
+                setError(error);
+            })
+        }else{
+            setError('Please select file first');
+            setLoading(false);
+        }
+    }
+
     return (
         <section className="pt-0">
             <div className="container">
                 <div className="row align-items-center ">
                     <div className="col-sm-6 offset-md-3">
                         <h2 className="text-left mb-4 text-center" style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}>Upload X-ray image to see result</h2>
-                        <div className="response-output "></div>
+                            <span style={{color:'#ff0000',marginLeft:20,fontWeight:600,fontSize:18}}>{error}</span>
                             <div className="contact-form">
+                           
                                 <Stack direction={'column'} spacing={2} justifyContent={'center'} alignItems={'center'} style={style.dragBox}>
                                     <Avatar style={style.uploadIcon}>
                                         <CloudUploadOutlinedIcon style={{color:'#fff',fontSize: '50px',fontFamily:'Arial, Helvetica, sans-serif'}}/>
                                     </Avatar>
                                     <div style={style.titleText}>Upload a PNG or JPG File</div>
+                                   
                                     <button onClick={handleInputClick} style={style.uploadBtn}>
                                         Upload a file
                                     </button>
@@ -73,10 +119,37 @@ export default function DemoInput() {
                                     <span style={{fontSize:'14px',color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}>{fileName}</span>
                                 </Stack>
                                 <div>
-                                    <button id="submit-4" name="submit" type="submit" value="Send"
-                                            className="button d-block w-100">Check Now
+                                    <button id="submit-4" onClick={handleSubmit}
+                                        className="button d-block w-100">{isLoading?<Box sx={{ display: 'flex',justifyContent:'center' }}>
+                                        <CircularProgress  size={30} sx={{color:'#fff'}}/>
+                                        </Box>: 'Check Now'}
                                     </button>
                                 </div>
+                                <HeightBox height={40}/>
+                               
+                                <Stack direction={'row'} justifyContent={'space-between'} style={{background:'#525f81',borderRadius:10,padding:'20px 40px 0 20px '}}>
+                                    <Stack>
+                                        <span style={{color:'#fff',fontWeight:600,fontSize:18,paddingLeft:40}}>{'Image'}</span>
+                                        {image && <img src={image}  style={{width:180,height:200,marginTop:20}}/>}
+                                    </Stack>
+                                    <div>
+                                        {isLoading ?<span>Wait for result</span>:
+                                        <ul style={{listStyle:'none'}}>
+                                            <li><span style={{color:'#fff',fontWeight:600,fontSize:18}}>{'Result'}</span></li>
+                                            <li style={{marginTop:40}}><span style={{color:'#fff',fontWeight:600,fontSize:16}}>{response && response.labelName.replace('_',' ')}</span></li>
+                                            <li><span style={{color:'#fff',fontWeight:600,fontSize:16}}>
+                                                {
+                                                   
+                                                    response && parseInt(response.score*100)+'%'
+                                                }
+                                            </span></li>
+                                        </ul>
+                                        }
+                                      
+                                    </div>
+                                </Stack>
+                                   
+                               
                             </div>
                     </div>
                 </div>
