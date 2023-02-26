@@ -5,7 +5,7 @@ import Stack from "@mui/material/Stack";
 import Avatar from '@mui/material/Avatar';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
-import { apikey, apisecret, apiurl } from "../config/cred";
+import { apikey, apisecret, apiurl, headers } from "../config/cred";
 import axios from 'axios';
 import HeightBox from "./heightBox";
 
@@ -38,6 +38,16 @@ var style = {
         padding:40,
         margin:20,
         borderRadius: 10
+    },
+    resultStyle:{
+        color:'#fff',
+        fontWeight:600,
+        fontSize:16
+    },
+    resultBox:{
+        background:'#525f81',
+        borderRadius:10,
+        padding:'20px 40px 20px 20px '
     }
 
 }
@@ -65,24 +75,15 @@ export default function DemoInput() {
         setLoading(true);
         setError('');
         if(fileName!==null){
-            const headers = {
-                'Access-Control-Allow-Origin': '*',
-                'Content-Type': 'multipart/form-data',
-            }
-           
             axios({
                 method:'post',
                 headers:headers,
                 url:apiurl,
-                data:{
-                    file:file
-                }
-            })
-            .then((res) => {
+                data:{file:file}
+            }).then((res) => {
                 setResponse(res.data.predictions);
                 setLoading(false);
-            })
-            .catch((error) => {
+            }).catch((error) => {
                 setError(error);
             })
         }else{
@@ -127,29 +128,30 @@ export default function DemoInput() {
                                 </div>
                                 <HeightBox height={40}/>
                                
-                                <Stack direction={'row'} justifyContent={'space-between'} style={{background:'#525f81',borderRadius:10,padding:'20px 40px 0 20px '}}>
+                                <Stack direction={'row'} justifyContent={'space-between'} style={style.resultBox}>
                                     <Stack>
                                         <span style={{color:'#fff',fontWeight:600,fontSize:18,paddingLeft:40}}>{'Image'}</span>
                                         {image && <img src={image}  style={{width:180,height:200,marginTop:20}}/>}
                                     </Stack>
-                                    <div>
-                                        {isLoading ?<span>Wait for result</span>:
-                                        <ul style={{listStyle:'none'}}>
-                                            <li><span style={{color:'#fff',fontWeight:600,fontSize:18}}>{'Result'}</span></li>
-                                            <li style={{marginTop:40}}><span style={{color:'#fff',fontWeight:600,fontSize:16}}>{response && response.labelName.replace('_',' ')}</span></li>
-                                            <li><span style={{color:'#fff',fontWeight:600,fontSize:16}}>
-                                                {
-                                                   
-                                                    response && parseInt(response.score*100)+'%'
-                                                }
-                                            </span></li>
+                                    <Stack>
+                                        <div><span style={{color:'#fff',fontWeight:600,fontSize:18,marginLeft:22}}>{'Result'}</span></div>
+                                        {!isLoading && response!=null &&
+                                        <ul style={{listStyle:'none',paddingRight:20}}>
+                                            <li style={{marginTop:40}}>
+                                                <span style={style.resultStyle}>
+                                                    {response && response.labelName.replace('_',' ')}
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span style={style.resultStyle}>
+                                                { response && parseInt(response.score*100)}
+                                                %</span>
+                                            </li>
                                         </ul>
                                         }
-                                      
-                                    </div>
-                                </Stack>
-                                   
-                               
+                                        
+                                    </Stack>
+                                </Stack> 
                             </div>
                     </div>
                 </div>
