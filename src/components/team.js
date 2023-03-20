@@ -9,7 +9,8 @@ import team1 from '../images/pandey.png';
 import team3 from '../images/akash.jpg';
 import team4 from '../images/himanshu.jpg';
 import team5 from '../images/mayank.jpg';
-import team2 from '../images/gopi.png';
+import team6 from '../images/mayank2.jpg';
+import team from '../images/gopi.png';
 import Stack from '@mui/material/Stack';
 import HeightBox from './heightBox';
 const Item = styled(Paper)(({ theme }) => ({
@@ -64,6 +65,23 @@ export default function Team(){
                             <Stack alignItems={'center'}>
                                 <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Gopi chand</span><br/>
                                 <span style={{fontSize:16,color:'#fff',textAlign:'center'}}>CTO</span>
+                            </Stack>
+                        </CardContent>
+                    </Card>
+                </Grid>
+                <Grid xs={2} sm={4} md={4} key={'3'} style={{marginBottom:10}}>
+                    <Card sx={{ maxWidth: 345 }} style={{borderRadius:11,background:'#121228'}}>
+                        <CardMedia
+                            component="img"
+                            height="194"
+                            image={team6}
+                            alt="Paella dish"
+                            style={{borderRadius:10}}
+                        />
+                        <CardContent>
+                            <Stack alignItems={'center'}>
+                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Mayank Singh Chauhan</span><br/>
+                                <span style={{fontSize:16,color:'#fff'}}>Chief Operating Officer</span>
                             </Stack>
                         </CardContent>
                     </Card>
