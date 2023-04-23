@@ -72,9 +72,9 @@ export  default function Service() {
                                 <li><i className="fa fa-check-square-o"></i> <span>Identifies multiple anomalies in chest X-rays</span></li>
                                 <li><i className="fa fa-check-square-o"></i>
                                     <span>Used by 10+ Doctors</span></li>
-                                <li><i className="fa fa-check-square-o"></i> <span>Trained on over 1M X-ray Scans</span></li>
-                                <li><i className="fa fa-check-square-o"></i> <span>Send reports to Doctors in real time</span></li>
-                                <li><i className="fa fa-check-square-o"></i> <span>Reporting and flags radiological signs of diseases like TB, lung cancer & heart failure.</span></li>    
+                                <li><i className="fa fa-check-square-o"></i> <span>Trained on over 1 million X-ray Scans</span></li>
+                                <li><i className="fa fa-check-square-o"></i> <span>Provides real-time reports to physicians</span></li>
+                                <li><i className="fa fa-check-square-o"></i> <span>Highlights radiological indicators of diseases, such as TB, lung cancer, and heart failure.</span></li>    
                             </ul>
                         </div>
                     </div>
