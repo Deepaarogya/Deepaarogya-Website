@@ -8,9 +8,9 @@ import { styled } from '@mui/material/styles';
 import team1 from '../images/pandey.png';
 import team3 from '../images/akash.jpg';
 import team4 from '../images/himanshu.jpg';
-import team5 from '../images/mayank.jpg';
+import team5 from '../images/mayank.png';
 import team6 from '../images/gopi.png';
-import team2 from '../images/gopi.png';
+import team2 from '../images/Shivani.png';
 import Stack from '@mui/material/Stack';
 import HeightBox from './heightBox';
 const Item = styled(Paper)(({ theme }) => ({
@@ -46,7 +46,7 @@ export default function Team(){
                         />
                         <CardContent>
                             <Stack alignItems={'center'}>
-                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Abhishek kumar pandey</span><br/>
+                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Abhishek Kumar Pandey</span><br/>
                                 <span style={{fontSize:16,color:'#fff',textAlign:'center'}}>CEO</span>
                             </Stack>
                         </CardContent>
@@ -63,8 +63,8 @@ export default function Team(){
                         />
                         <CardContent>
                             <Stack alignItems={'center'}>
-                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Gopi chand</span><br/>
-                                <span style={{fontSize:16,color:'#fff',textAlign:'center'}}>CTO</span>
+                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Dr. Shivani Fotedar</span><br/>
+                                <span style={{fontSize:16,color:'#fff',textAlign:'center'}}>Chief  Medical Officer</span>
                             </Stack>
                         </CardContent>
                     </Card>
@@ -80,8 +80,8 @@ export default function Team(){
                         />
                         <CardContent>
                             <Stack alignItems={'center'}>
-                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Mayank Singh Chauhan</span><br/>
-                                <span style={{fontSize:16,color:'#fff'}}>Chief Operating Officer</span>
+                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Gopichand Saini</span><br/>
+                                <span style={{fontSize:16,color:'#fff'}}>CTO</span>
                             </Stack>
                         </CardContent>
                     </Card>
@@ -97,8 +97,8 @@ export default function Team(){
                         />
                         <CardContent>
                             <Stack alignItems={'center'}>
-                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Akash desai</span><br/>
-                                <span style={{fontSize:16,color:'#fff'}}>Chief  Data Scientist</span>
+                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Akash Desai</span><br/>
+                                <span style={{fontSize:16,color:'#fff'}}>Chief Data Scientist</span>
                             </Stack>
                         </CardContent>
                     </Card>
@@ -114,8 +114,8 @@ export default function Team(){
                         />
                         <CardContent>
                             <Stack alignItems={'center'}>
-                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Himanshu Upadhyay</span><br/>
-                                <span style={{fontSize:16,color:'#fff',textAlign:'center'}}>Advisor & Principal Data Scientist <br/> Florida International University </span>
+                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Dr. Himanshu Upadhyay</span><br/>
+                                <span style={{fontSize:16,color:'#fff',textAlign:'center'}}>Advisor & Principal Data Scientist <br/> (Florida International University)</span>
                             </Stack>
                         </CardContent>
                     </Card>
