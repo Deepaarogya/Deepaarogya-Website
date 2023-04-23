@@ -44,7 +44,7 @@ export default  function Header(){
 
                 }}
                 >
-                    <Typography style={style.centerText}>We help to reduce the chance of death from unknown diseases using our AI based solutions</Typography>
+                    <Typography style={style.centerText}>Our AI-based solutions aid in minimizing mortality risk from unidentified illnesses.</Typography>
                 </Box>
             </Container>
         </div>

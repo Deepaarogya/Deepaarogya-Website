@@ -21,15 +21,13 @@ export default function Heart(){
                         </div>
                         <div className=" fadeInUp  col-sm-12 col-lg-6 col-md-6 wow align-items-center">
                             <div className="title-box wow fadeInUp text-left">
-                                <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px',fontFamily:'Arial, Helvetica, sans-serif'}}>Heart Attack</h2>
-                                <p style={{color:'#fff',fontSize:'18px',fontFamily:'Arial, Helvetica, sans-serif'}}> World Heart Day is observed every year on September 29. The number of deaths due to heart attacks in India has remained consistently over 25,000 in the last four years, and over 28,000 in the last three years, according to data on "Accidental Deaths & Suicides in India" (ADSI) compiled by the National Crime Records Bureau (NCRB). 
-                                Cardiovascular diseases (CVD) is a major threat to human health and the leading cause of death worldwide<br/>&nbsp;&nbsp;&nbsp;&nbsp;
-                                 Our AI algorithm accurately distinguishes not only abnormal
-                                  from normal, but also between which underlying potentially 
-                                  life-threatening cardiac conditions may be present—with 
-                                  warning signals that are now detectable well before the 
-                                  disease clinically progresses to the point where it can 
-                                  impact health outcomes. </p>
+                                <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px',fontFamily:'Arial, Helvetica, sans-serif'}}>Heart Attack awareness</h2>
+                                <p style={{color:'#fff',fontSize:'18px',fontFamily:'Arial, Helvetica, sans-serif'}}>Every year on September 29, World Heart Day raises awareness about heart health.
+                                 In India, heart attack-related deaths have consistently exceeded 25,000 in the last four years, with over 28,000 in the past three years, as reported by 
+                                 the National Crime Records Bureau (NCRB) in their "Accidental Deaths & Suicides in India" (ADSI) data.
+                                  Cardiovascular diseases (CVD) pose a significant risk to human health and are the primary cause of death globally.<br/>&nbsp;&nbsp;&nbsp;&nbsp;
+                                  Our AI algorithm can accurately differentiate not only between normal and abnormal conditions but also identify specific, potentially life-threatening cardiac issues.
+                                   This allows for the detection of warning signals well before the disease progresses to a stage that adversely affects health outcomes.</p>
                             </div>
                            
                         </div>

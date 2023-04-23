@@ -10,7 +10,7 @@ import team3 from '../images/akash.jpg';
 import team4 from '../images/himanshu.jpg';
 import team5 from '../images/mayank.jpg';
 import team6 from '../images/mayank2.jpg';
-import team from '../images/gopi.png';
+import team2 from '../images/gopi.png';
 import Stack from '@mui/material/Stack';
 import HeightBox from './heightBox';
 const Item = styled(Paper)(({ theme }) => ({

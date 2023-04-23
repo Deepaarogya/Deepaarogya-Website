@@ -17,9 +17,9 @@ export default function Report() {
                 <div className="row row-fluid row-has-fill iq-how-it-works">
                     <div className="iq-mb-30 fadeInUp wow col-sm-12 col-lg-5 col-md-12 align-items-center">
                         <div className="title-box wow fadeInUp text-left">
-                            <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px',fontFamily:'Arial, Helvetica, sans-serif'}}>X-ray analysis</h2>
-                            <p style={{color:'#fff',fontSize:'16px',fontFamily:'Arial, Helvetica, sans-serif'}}>AI image analysis could support remote areas that don’t have easy access to healthcare providers.
-                            AI tools can support human providers to provide faster service, diagnose issues and analyze data to identify trends</p>
+                            <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px',fontFamily:'Arial, Helvetica, sans-serif'}}>X-ray Evaluation with AI</h2>
+                            <p style={{color:'#fff',fontSize:'16px',fontFamily:'Arial, Helvetica, sans-serif'}}>AI-driven image analysis can benefit remote regions with limited access to healthcare services.
+                             By assisting human providers, AI technologies enable quicker service, improved diagnostics, and data analysis for identifying patterns and trends.</p>
                         </div>
                         <div className="services-content wow fadeInUp progress-style text-left">
                             <div className="progress-content">
