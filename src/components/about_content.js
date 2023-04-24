@@ -12,16 +12,13 @@ export default function AboutContent() {
                     <div className=" fadeInUp  col-sm-12 col-lg-6 col-md-6 wow align-items-center" style={{marginTop:'50px'}}>
                         <div className="title-box wow fadeInUp text-left">
                             <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px',fontFamily:'Arial, Helvetica, sans-serif'}}>About Us</h2>
-                            <p style={{color:'#fff',fontSize:'18px',fontFamily:'Arial, Helvetica, sans-serif'}}> 
-                            We have a strong team of Data Scientists, Engineers and Doctors that work on the mission 
-                            to reduce the chance of death from unknown disease. We use A.I to predict
-                             different diseases in their early stage in the patient body based on their X-ray, 
-                             CT Scan and MRI reports. We predict the disease using our AI Solution and send reports
-                              to Doctors in real time.<br/>&nbsp;&nbsp;&nbsp;&nbsp; We help doctors to make decisions on patient condition with
-                               the help of our AI data solutions in Heart-attack,Cancer and Chest related 
-                               disease(like- Covid, Tuberculosis, Viral Pneumonia). Our aim is to reduce 
-                               the maximum number of deaths in the world due to unknown diseases. 
-                               We work hard to save people's lives with the help of our innovations. </p>
+                            <p style={{color:'#fff',fontSize:'18px',fontFamily:'Arial, Helvetica, sans-serif'}}>At our company, we have assembled a dedicated team of Data Scientists, Engineers, and 
+                            Doctors who are committed to our mission of reducing the incidence of deaths resulting from unknown diseases. Leveraging the power of artificial intelligence, we have developed
+                             a solution that can predict the onset of various diseases at an early stage based on a patient's X-ray, CT Scan, and MRI reports. Our AI technology allows us to
+                              provide real-time disease detection reports to doctors, empowering them to make informed decisions on patient condition, particularly in cases of Heart-attack, Cancer, and
+                               Chest-related diseases such as Covid, Tuberculosis, and Viral Pneumonia.
+                             <br/>&nbsp;&nbsp;&nbsp;&nbsp;Our ultimate goal is to make a significant contribution to reducing the number of fatalities caused by unknown diseases worldwide. 
+                             With our innovative solutions, we strive to save as many lives as possible.</p>
                         </div>
                         {/* <div className="text-left">
                             <ul className="iq-list" style={{color:'#fff',fontSize:'16px',fontFamily:'Arial, Helvetica, sans-serif'}}>

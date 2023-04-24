@@ -9,14 +9,11 @@ export default function ReadySection() {
                 <div className="row">
                     <div className="col-lg-6 wow fadeInUp align-items-center">
                         <div className="title-box wow fadeInUp text-left" >
-                            <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px',fontFamily:'Arial, Helvetica, sans-serif'}}>X-rays: Artificial intelligence</h2>
-                            <p style={{color:'#fff',fontSize:'16px',fontFamily:'Arial, Helvetica, sans-serif'}}>AI has advanced into day-to-day routines and into an assortment of
-                                medical care, medication discovery, image-guided therapy etc.The COVID-19 pandemic increased the use
-                                of X-Ray scans, which were used to screen out COVID-19 patients as they allowed doctors to
-                                see if the corona virus had affected the lung. This has had a direct impact on the demand for AI-enabled
-                                X-Ray imaging solutions to help healthcare workers screen patients in less time. And we have found the solutions for these type
-                            of problems.<br/> <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In our AI model you can detect whether a patient is affected by corona virus or not. Our AI model is progressively being utilized for
-                                upgrading patient care and bringing down the expenses of clinical imaging techniques.Large public and proprietary image data sets have been compiled and have aided the development of AI algorithms for analysis of radiographs, many of which demonstrate accuracy equivalent to radiologists for specific, focused tasks. </p>
+                            <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px',fontFamily:'Arial, Helvetica, sans-serif'}}>AI in X-ray Imaging: Revolutionizing Healthcare</h2>
+                            <p style={{color:'#fff',fontSize:'16px',fontFamily:'Arial, Helvetica, sans-serif'}}>AI integration has permeated various aspects of healthcare, from drug discovery to image-guided therapy. 
+                            The COVID-19 pandemic led to an increased reliance on X-ray scans to identify affected lungs, thereby boosting the demand for AI-enabled X-ray imaging solutions to expedite patient screening. Our innovative
+                             AI model addresses this need.<br/> <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our AI model can efficiently detect coronavirus cases, enhancing patient care and reducing clinical imaging costs.
+                              The compilation of large public and proprietary image datasets has facilitated the development of AI algorithms for radiograph analysis, many of which achieve radiologist-level accuracy for specific, targeted tasks.</p>
                         </div>
                         {/* <div className=" text-left mt-5 ">
                             <a className="button button-icon" href="about-us.html"> <span

@@ -21,9 +21,9 @@ export  default function Service() {
                             <div className="service-detail align-self-center">
                                 <h4 className="mb-2" style={{color:'#fff'}}>X-rays</h4>
                                 <p style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif',letterSpacing:'0.5px'}}>
-                                    X-rays are dense and often unwieldy documents that cover a patient's medical history and treatment plan
-                                    and these X-rays are notoriously difficult to scan through quickly.
-                                    Our AI models are capable of "reading" through records and extracting the most important information. The model can then present the data in an easy-to-read format. </p>
+                                    X-rays, being dense and cumbersome, can make it challenging to swiftly review a patient's medical history and
+                                    treament plan.
+                                    Our AI models proficiently analyze these records,extracting crucial information and presenting it in a user-friendly format. </p>
 
                             </div>
                         </div>
@@ -34,8 +34,9 @@ export  default function Service() {
                             <img className="fancy-list-img" src={service2} alt="fancy-list"/>
                                 <div className="service-detail align-self-center">
                                     <h4 className="mb-2" style={{color:'#fff'}}>Hospitals</h4>
-                                    <p style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif',letterSpacing:'0.5px'}}> Hospitals often find themselves under a range of intense pressures, like time and money. This means patients may sometimes be left in the dark about their condition simply because the staff around them are too busy to answer questions in depth.
-                                    Our AI Model can provide 24/7 bedside support</p>
+                                    <p style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif',letterSpacing:'0.5px'}}>Under considerable time and financial constraints, hospitals may struggle to 
+                                    address patients' concerns in detail, leaving them uninformed about their conditions. Our AI model offers round-the-clock bedside support to bridge this gap.
+ </p>
 
                                 </div>
                         </div>
@@ -45,9 +46,8 @@ export  default function Service() {
                             <img className="fancy-list-img" src={service3} alt="fancy-list"/>
                                 <div className="service-detail align-self-center">
                                     <h4 className="mb-2" style={{color:'#fff'}}>Our Model</h4>
-                                    <p style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif',letterSpacing:'0.5px'}}> Our model is designed to empower doctors during key moments in the medical journey.
-                                        For doctors with no time,Our AI model requires a CT scan of the patient's lungs. If the tool detects any signs of diseases, it will produces data in an easy-to-read format.
-                                        Our models is accelerating diagnostic processes and making it easier for doctors to access information.</p>
+                                    <p style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif',letterSpacing:'0.5px'}}>Our AI model aims to support physicians during crucial medical events. 
+                                    Designed for time-pressed doctors, it necessitates a CT scan of the patient's lungs, identifies potential diseases, and presents the findings in a comprehensible format. This accelerates diagnostics and streamlines information access for medical professionals.</p>
                                 </div>
                         </div>
                     </div>
@@ -62,19 +62,19 @@ export  default function Service() {
                     </div>
                     <div className=" fadeInUp  col-sm-12 col-lg-6 col-md-6 wow align-items-center">
                         <div className="title-box wow fadeInUp text-left">
-                            <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px'}}>Human Behaviour, Artificial Intelligence</h2>
-                            <p style={{color:'#fff',fontSize:'18px'}}> X-rays analysis is very time consuming for human providers,
-                                but we developed a X-ray scanning algorithm that can analyze scans up to 1,000
-                                times faster than what is possible today.  </p>
+                            <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px'}}> Human Behavior Meets AI Technology.</h2>
+                            <p style={{color:'#fff',fontSize:'18px'}}>Analyzing X-rays can be labor-intensive for healthcare providers; however, our cutting-edge X-ray
+                             scanning algorithm streamlines the process, analyzing scans up to 1,000 times faster than current methods.</p>
+                    
                         </div>
                         <div className="text-left">
                             <ul className="iq-list" style={{color:'#fff',fontSize:'16px'}}>
-                                <li><i className="fa fa-check-square-o"></i> <span>Detection of multiple abnormal findings on a chest X-ray</span></li>
+                                <li><i className="fa fa-check-square-o"></i> <span>Identifies multiple anomalies in chest X-rays</span></li>
                                 <li><i className="fa fa-check-square-o"></i>
                                     <span>Used by 10+ Doctors</span></li>
-                                <li><i className="fa fa-check-square-o"></i> <span>Trained on over 1M X-ray Scans</span></li>
-                                <li><i className="fa fa-check-square-o"></i> <span>Send reports to Doctors in real time</span></li>
-                                <li><i className="fa fa-check-square-o"></i> <span>Reporting and flags radiological signs of diseases like TB, lung cancer & heart failure.</span></li>    
+                                <li><i className="fa fa-check-square-o"></i> <span>Trained on over 1 million X-ray Scans</span></li>
+                                <li><i className="fa fa-check-square-o"></i> <span>Provides real-time reports to physicians</span></li>
+                                <li><i className="fa fa-check-square-o"></i> <span>Highlights radiological indicators of diseases, such as TB, lung cancer, and heart failure.</span></li>    
                             </ul>
                         </div>
                     </div>

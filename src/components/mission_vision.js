@@ -42,7 +42,7 @@ export default function MissionVision() {
                             <img src={box1} alt="fancybox"/>
                                 <div className="service-detail align-self-center">
                                     <h4 className="mb-2" style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}>Mission</h4>
-                                    <p style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}>We help to reduce the chance of death from unknown diseases using our AI based solutions</p>
+                                    <p style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}>Our mission is to utilize AI-based solutions to mitigate the risk of mortality caused by unidentified diseases.</p>
                                 </div>
                         </div>
                     </div>
@@ -50,8 +50,8 @@ export default function MissionVision() {
                         <div className="service-box mt-5 mb-0 wow fadeInUp  text-left" data-wow-delay="1s" style={style.gradient_bg}>
                             <img src={box2} alt="fancybox"/>
                                 <div className="service-detail align-self-center">
-                                    <h4 className="mb-2" style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}>Vission</h4>
-                                    <p style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}>Helping healthcare ecosystem discover key areas of patient care that require improvement. </p>
+                                    <h4 className="mb-2" style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}>Vision</h4>
+                                    <p style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}>Our vision is to assist the healthcare ecosystem in identifying crucial areas of patient care that necessitate enhancement. </p>
                                 </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@ export default function MissionVision() {
                             <img src={box3} alt="fancybox"/>
                                 <div className="service-detail align-self-center">
                                     <h4 className="mb-2" style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}>Goal</h4>
-                                    <p style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}>To provide software that can scan different type of X-rays, CT Scan, can detect diffrent disease </p>
+                                    <p style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}>Our goal is to develop software that can accurately scan various types of medical imaging, such as X-rays and CT scans, and promptly detect different diseases. </p>
                                 </div>
                         </div>
                     </div>

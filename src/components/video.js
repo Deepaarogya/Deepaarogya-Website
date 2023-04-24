@@ -38,19 +38,19 @@ export default function VideoSection() {
                     <div className="col-md-6">
                         <div className="title-box wow fadeInUp text-white  text-left">
                             <span className="title-design"></span>
-                            <h2 style={{fontSize:'42px',lineHeight:"50px",fontFamily:'Arial, Helvetica, sans-serif'}}>Checkout out our demo video</h2>
+                            <h2 style={{fontSize:'42px',lineHeight:"50px",fontFamily:'Arial, Helvetica, sans-serif'}}>Checkout our demo video</h2>
 
                         </div>
                         <div className="iq-timer style1text-left float-left text-left">
                             <div className="timer-details">
-                                <span className="timer" data-to="50" data-speed="5000">50</span>
+                                <span className="timer" data-to="10" data-speed="5000">10</span>
                                 <i className="fa fa-plus" aria-hidden="true" style={{color: "#02E0B8"}}></i>
                                 <p style={{fontSize:'16px',fontFamily:'Arial, Helvetica, sans-serif'}}> Customer love us to develop this model </p>
                             </div>
                         </div>
                         <div className="iq-timer style1text-left  float-left text-left">
                             <div className="timer-details">
-                                <span className="timer" data-to="10" data-speed="5000">90</span><i
+                                <span className="timer" data-to="80" data-speed="5000">80</span><i
                                 className="fa fa-percent" aria-hidden="true" style={{color: "#02E0B8"}}></i>
                                 <p style={{fontSize:'16px',fontFamily:'Arial, Helvetica, sans-serif'}}> Doctor Satisfaction
                                     and found useful this model

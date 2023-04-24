@@ -16,14 +16,13 @@ export default function LungCancer() {
                     <div className="iq-mb-30 fadeInUp wow col-sm-12 col-lg-5 col-md-12 align-items-center">
                         <div className="title-box wow fadeInUp text-left">
 
-                            <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px',fontFamily:'Arial, Helvetica, sans-serif'}}>Chest Cancer detection</h2>
+                            <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px',fontFamily:'Arial, Helvetica, sans-serif'}}>Chest Cancer Detection Enhanced</h2>
                             <p style={{color:'#fff',fontSize:'16px',fontFamily:'Arial, Helvetica, sans-serif'}}>
-                            Lung cancer is the leading cause of malignancy-related mortality worldwide. AI has the potential to help to treat lung cancer from detection, diagnosis and decision making to prognosis prediction. AI could reduce the labor work of LDCT, CXR, and pathology slides reading. AI as a second reader in LDCT and CXR reading reduces the effort of radiologists and increases the accuracy of nodule detection.
-                            <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One such solution is artificial intelligence (AI) automated CT lung cancer detection,
-                                 which can be used to assist physicians, thereby reducing their burden of work, optimizing hospital operational workflow, 
-                            and providing more time to develop a high-quality doctor-patient relationship
-                            <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AI could help clinicians in decision-making by predicting treatment response, side effects, and prognosis prediction in medical treatment, surgery, and radiotherapy. Integrating AI in the future clinical workflow would be promising.
-                            </p>
+                            As the leading cause of cancer-related deaths globally, lung cancer treatment can greatly benefit from AI in various aspects, such as detection, diagnosis, decision-making, and prognosis prediction. 
+                            AI can ease the workload associated with reading LDCT, CXR, and pathology slides. By acting as a second reader in LDCT and CXR analysis, AI reduces radiologists' efforts and improves nodule detection accuracy.
+                            <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AI-powered automated CT lung cancer detection assists physicians, alleviating their workload,
+                             optimizing hospital workflows, and enabling more time for fostering high-quality doctor-patient relationships.
+                             <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AI can also support clinicians in decision-making by predicting treatment responses, side effects, and prognosis for medical treatments, surgeries, and radiotherapy. Incorporating AI into future clinical workflows holds great promise.</p>
                         </div>
                         
                     </div>
