@@ -16,9 +16,9 @@ export default function LungCancer() {
                     <div className="iq-mb-30 fadeInUp wow col-sm-12 col-lg-5 col-md-12 align-items-center">
                         <div className="title-box wow fadeInUp text-left">
 
-                            <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px',fontFamily:'Arial, Helvetica, sans-serif'}}>Chest Cancer Detection Enhanced</h2>
+                            <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px',fontFamily:'Arial, Helvetica, sans-serif'}}>ICU predictive models</h2>
                             <p style={{color:'#fff',fontSize:'16px',fontFamily:'Arial, Helvetica, sans-serif'}}>
-                            As the leading cause of cancer-related deaths globally, lung cancer treatment can greatly benefit from AI in various aspects, such as detection, diagnosis, decision-making, and prognosis prediction. 
+                            Our AI models can predict which patients are at risk of developing complications in the ICU. This information can be used to improve patient care and prevent unnecessary deaths.
                             AI can ease the workload associated with reading LDCT, CXR, and pathology slides. By acting as a second reader in LDCT and CXR analysis, AI reduces radiologists' efforts and improves nodule detection accuracy.
                             <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AI-powered automated CT lung cancer detection assists physicians, alleviating their workload,
                              optimizing hospital workflows, and enabling more time for fostering high-quality doctor-patient relationships.

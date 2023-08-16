@@ -62,9 +62,9 @@ export  default function Service() {
                     </div>
                     <div className=" fadeInUp  col-sm-12 col-lg-6 col-md-6 wow align-items-center">
                         <div className="title-box wow fadeInUp text-left">
-                            <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px'}}> Human Behavior Meets AI Technology.</h2>
-                            <p style={{color:'#fff',fontSize:'18px'}}>Analyzing X-rays can be labor-intensive for healthcare providers; however, our cutting-edge X-ray
-                             scanning algorithm streamlines the process, analyzing scans up to 1,000 times faster than current methods.</p>
+                            <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px'}}> AI Solutions for Early Disease Detection and Improved Patient Outcomes.</h2>
+                            <p style={{color:'#fff',fontSize:'18px'}}>Artificial intelligence (AI) is revolutionizing the healthcare industry, and nowhere is this 
+                            more evident than in the field of disease detection. AI-powered solutions can help to detect diseases earlier, more accurately, and more efficiently than traditional methods.</p>
                     
                         </div>
                         <div className="text-left">
