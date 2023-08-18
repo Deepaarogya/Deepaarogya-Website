@@ -6,11 +6,11 @@ import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Unstable_Grid2';
 import { styled } from '@mui/material/styles';
 import team1 from '../images/pandey.png';
-import team3 from '../images/Shivani.jpeg';
-import team4 from '../images/Dipali.jpeg';
-import team5 from '../images/Prabhu.jpeg';
-import team6 from '../images/Abhishek_Yadav.jpeg';
-import team2 from '../images/Akash.jpeg';
+import team3 from '../images/Shivani.png';
+import team4 from '../images/Dipali.png';
+import team5 from '../images/Prabhu.png';
+import team6 from '../images/Abhishek_Yadav.png';
+import team2 from '../images/Akash.png';
 import Stack from '@mui/material/Stack';
 import HeightBox from './heightBox';
 const Item = styled(Paper)(({ theme }) => ({
@@ -98,7 +98,7 @@ export default function Team(){
                         <CardContent>
                             <Stack alignItems={'center'}>
                                 <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Dr. Shivani Fotedar</span><br/>
-                                <span style={{fontSize:16,color:'#fff'}}>Co-founder(Medical) </span>
+                                <span style={{fontSize:16,color:'#fff'}}>Co-founder (Medical) </span>
                             </Stack>
                         </CardContent>
                     </Card>
@@ -115,7 +115,7 @@ export default function Team(){
                         <CardContent>
                             <Stack alignItems={'center'}>
                                 <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Dr. Dipali Taneja</span><br/>
-                                <span style={{fontSize:16,color:'#fff',textAlign:'center'}}>Medical Specialist(ICU) </span>
+                                <span style={{fontSize:16,color:'#fff',textAlign:'center'}}>Medical Specialist (ICU) </span>
                             </Stack>
                         </CardContent>
                     </Card>

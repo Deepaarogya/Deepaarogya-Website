@@ -401,7 +401,7 @@ article.hentry .iq-blog-detail .blog-content .page-links a:hover { color: #fff; 
 .main-left { margin-bottom: 60px !important; }
 .title-box { margin-top: -5px; }
 .xamin-contact .title-box.text-center { margin-bottom: 30px }
-.title-box.text-left p { margin-right: 40px}
+.title-box.text-left p { margin-right: 10px}
 .title-box h2 { margin-bottom: 15px; }
 .title-box-space, .title-box.text-left.title-box-space { margin-bottom: 30px; }
 .title-box .title-design { font-family: 'Lato', sans-serif; font-weight: normal; color: #437eeb; display: inline-block; position: relative; text-transform: uppercase; }

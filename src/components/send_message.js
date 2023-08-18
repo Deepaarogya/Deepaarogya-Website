@@ -47,7 +47,7 @@ export default function SendMessage() {
                                             href="mailto:contact@deepaarogya.com" style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}> contact@deepaarogya.com</a>
                                         </li>
                                         <li><a
-                                            href="mailto:deepaarogya002@gmail.com" style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}> info@deepaarogya.com</a>
+                                            href="mailto:deepaarogya002@gmail.com" style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}> deepaarogya002@gmail.com</a>
                                         </li>
                                     </ul>
                                 </div>
