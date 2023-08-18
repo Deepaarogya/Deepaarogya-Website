@@ -44,7 +44,7 @@ export default  function Header(){
 
                 }}
                 >
-                    <Typography style={style.centerText}>Leveraging AI innovations for Life Changing Solutions</Typography>
+                    <Typography style={style.centerText}>Leveraging AI innovations for Life Changing Solutions in Healthcare</Typography>
                 </Box>
             </Container>
         </div>

@@ -1,5 +1,5 @@
 
-import lung_cancer from "../images/AptTastyGibbon-size_restricted.gif";
+import lung_cancer from "../images/ICU.jpg";
 var style = {
     service_2: {
         margin: '40px',
@@ -16,13 +16,15 @@ export default function LungCancer() {
                     <div className="iq-mb-30 fadeInUp wow col-sm-12 col-lg-5 col-md-12 align-items-center">
                         <div className="title-box wow fadeInUp text-left">
 
-                            <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px',fontFamily:'Arial, Helvetica, sans-serif'}}>ICU predictive models</h2>
-                            <p style={{color:'#fff',fontSize:'16px',fontFamily:'Arial, Helvetica, sans-serif'}}>
+                            <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px',fontFamily:'Arial, Helvetica, sans-serif'}}>ICU Predictive models</h2>
+                            <p style={{color:'#fff',fontSize:'20px',fontFamily:'Arial, Helvetica, sans-serif'}}>
                             Our AI models can predict which patients are at risk of developing complications in the ICU. This information can be used to improve patient care and prevent unnecessary deaths.
-                            AI can ease the workload associated with reading LDCT, CXR, and pathology slides. By acting as a second reader in LDCT and CXR analysis, AI reduces radiologists' efforts and improves nodule detection accuracy.
-                            <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AI-powered automated CT lung cancer detection assists physicians, alleviating their workload,
-                             optimizing hospital workflows, and enabling more time for fostering high-quality doctor-patient relationships.
-                             <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AI can also support clinicians in decision-making by predicting treatment responses, side effects, and prognosis for medical treatments, surgeries, and radiotherapy. Incorporating AI into future clinical workflows holds great promise.</p>
+                            Predicting the severity and progression of respiratory conditions in 
+                            ICU patients is challenging. Our platform will integrate predictive models that use patient vitals, 
+                            medical history, and diagnostic data to forecast patient outcomes. These predictive analytics will 
+                            assist medical teams in making informed decisions, optimizing resource allocation, and improving 
+                            overall patient care. 
+                            <br/></p>
                         </div>
                         
                     </div>
