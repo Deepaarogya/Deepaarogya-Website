@@ -15,7 +15,7 @@ export default function Contact() {
                             </div>
                             <h4 className="mb-2" style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}>Contact</h4>
                             <p className="mb-0" style={{color:'#fff',fontSize:'16px',fontFamily:'Arial, Helvetica, sans-serif'}}>+918979523908<br/>
-                                +918755512976
+                                +919818810837
                                 </p>
                         </div>
                     </div>
@@ -39,7 +39,7 @@ export default function Contact() {
                                                                   className="fa fa-send"></i></div>
                                 <h4 className="mb-2" style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}>Mail</h4>
                                 <p className="mb-0" style={{color:'#fff',fontSize:'16px',fontFamily:'Arial, Helvetica, sans-serif'}}>contact@deepaarogya.com<br/>
-                                info@deepaarogya.com</p>
+                                deepaarogya002@gmail.com</p>
                             </div>
                         </div>
                     </div>
