@@ -6,11 +6,11 @@ import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Unstable_Grid2';
 import { styled } from '@mui/material/styles';
 import team1 from '../images/pandey.png';
-import team3 from '../images/akash.jpg';
-import team4 from '../images/himanshu.jpg';
-import team5 from '../images/mayank.png';
-import team6 from '../images/gopi.png';
-import team2 from '../images/Shivani.png';
+import team3 from '../images/Shivani.jpeg';
+import team4 from '../images/Dipali.jpeg';
+import team5 from '../images/Prabhu.jpeg';
+import team6 from '../images/Abhishek_Yadav.jpeg';
+import team2 from '../images/Akash.jpeg';
 import Stack from '@mui/material/Stack';
 import HeightBox from './heightBox';
 const Item = styled(Paper)(({ theme }) => ({
@@ -30,7 +30,7 @@ export default function Team(){
         <Box sx={{ flexGrow: 1 }} style={{width:'75%'}} >
         <Stack alignItems={'center'}>
             <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px',fontFamily:'Arial, Helvetica, sans-serif'}}>The Deepaarogya Team</h2>
-            <span style={{fontSize:18,color:'#fff',fontFamily:'Arial, Helvetica, sans-serif',textAlign:'center'}}>Our team of clinicians, researchers, and engineers are all working together to create new AI and discover opportunities to increase the availability and accuracy of healthcare technologies globally, to realize long-term health technology potential.</span>
+            <span style={{fontSize:18,color:'#fff',fontFamily:'Arial, Helvetica, sans-serif',textAlign:'center'}}>Our team of Doctors, Researchers, and Engineers are all working together to create new AI and discover opportunities to increase the availability and accuracy of healthcare technologies globally, to realize long-term health technology potential.</span>
         </Stack>
         <HeightBox height={50}/>
             <Grid container spacing={{ xs: 2, md: 8 }} columns={{ xs: 4, sm: 8, md: 12 }}>
@@ -47,7 +47,7 @@ export default function Team(){
                         <CardContent>
                             <Stack alignItems={'center'}>
                                 <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Abhishek Kumar Pandey</span><br/>
-                                <span style={{fontSize:16,color:'#fff',textAlign:'center'}}>CEO</span>
+                                <span style={{fontSize:16,color:'#fff',textAlign:'center'}}>Founder & CEO</span>
                             </Stack>
                         </CardContent>
                     </Card>
@@ -63,8 +63,8 @@ export default function Team(){
                         />
                         <CardContent>
                             <Stack alignItems={'center'}>
-                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Dr. Shivani Fotedar</span><br/>
-                                <span style={{fontSize:16,color:'#fff',textAlign:'center'}}>Chief  Medical Officer</span>
+                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Akash Desai</span><br/>
+                                <span style={{fontSize:16,color:'#fff',textAlign:'center'}}>Chief  Data Scientist</span>
                             </Stack>
                         </CardContent>
                     </Card>
@@ -80,8 +80,8 @@ export default function Team(){
                         />
                         <CardContent>
                             <Stack alignItems={'center'}>
-                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Gopichand Saini</span><br/>
-                                <span style={{fontSize:16,color:'#fff'}}>CTO</span>
+                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Abhishek Yadav</span><br/>
+                                <span style={{fontSize:16,color:'#fff'}}>Lead Data Scientist</span>
                             </Stack>
                         </CardContent>
                     </Card>
@@ -97,8 +97,8 @@ export default function Team(){
                         />
                         <CardContent>
                             <Stack alignItems={'center'}>
-                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Akash Desai</span><br/>
-                                <span style={{fontSize:16,color:'#fff'}}>Chief Data Scientist</span>
+                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Dr. Shivani Fotedar</span><br/>
+                                <span style={{fontSize:16,color:'#fff'}}>Co-founder(Medical) </span>
                             </Stack>
                         </CardContent>
                     </Card>
@@ -114,8 +114,8 @@ export default function Team(){
                         />
                         <CardContent>
                             <Stack alignItems={'center'}>
-                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Dr. Himanshu Upadhyay</span><br/>
-                                <span style={{fontSize:16,color:'#fff',textAlign:'center'}}>Advisor & Principal Data Scientist <br/> (Florida International University)</span>
+                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Dr. Dipali Taneja</span><br/>
+                                <span style={{fontSize:16,color:'#fff',textAlign:'center'}}>Medical Specialist(ICU) </span>
                             </Stack>
                         </CardContent>
                     </Card>
@@ -131,8 +131,8 @@ export default function Team(){
                         />
                         <CardContent>
                             <Stack alignItems={'center'}>
-                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Mayank Barthwal</span><br/>
-                                <span style={{fontSize:16,color:'#fff',textAlign:'center'}}>Lead Software Engineer </span>
+                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Dr. Prabhu Kalyan Dash</span><br/>
+                                <span style={{fontSize:16,color:'#fff',textAlign:'center'}}>Med-Tech Specialist </span>
                             </Stack>
                         </CardContent>
                     </Card>
