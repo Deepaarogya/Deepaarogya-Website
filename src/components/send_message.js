@@ -34,7 +34,7 @@ export default function SendMessage() {
                                     <h4 className="mb-2" style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}>Phone support</h4>
                                     <ul className="list-inline mb-0">
                                         <li><a href="tel:+0123456789" style={{color:'#fff'}}> +918979523908</a></li>
-                                        <li><a href="tel:+0123456789" style={{color:'#fff'}}> +918755512976</a></li>
+                                        <li><a href="tel:+0123456789" style={{color:'#fff'}}> +919818810837</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -44,10 +44,10 @@ export default function SendMessage() {
                                     <h4 className="mb-2" style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}>Email us</h4>
                                     <ul className="list-inline mb-0">
                                         <li><a
-                                            href="mailto:support@aidoctor.com" style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}> contact@deepaarogya.com</a>
+                                            href="mailto:contact@deepaarogya.com" style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}> contact@deepaarogya.com</a>
                                         </li>
                                         <li><a
-                                            href="mailto:info@aidoctor.com" style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}> info@deepaarogya.com</a>
+                                            href="mailto:deepaarogya002@gmail.com" style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}> info@deepaarogya.com</a>
                                         </li>
                                     </ul>
                                 </div>
