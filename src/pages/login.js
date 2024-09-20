@@ -84,7 +84,7 @@ export default function Login(){
                                 </Stack>
                                 <Stack alignItems={'center'} justifyContent={'center'}>
                                     <span style={{fontSize:16,color:'#fff',marginTop:10}}>OR</span>
-                                    <span style={{fontSize:14,color:'#fff'}}>Don't have an account? <a href='/register'>Create</a></span>
+                                    <span style={{fontSize:14,color:'#fff'}}>Don't have an account? <a href='http://dashboard.deepaarogya.com:5000/'>Create account</a></span>
                                 </Stack> 
                             </div> 
                         </div>
