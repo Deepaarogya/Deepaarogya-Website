@@ -173,6 +173,8 @@ export default function Register(){
     const [phone,setPhone] = useState("");
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
+    const hospital_id = "8b6eab5d-5eeb-4f9c-bab1-caa1e5dc4d37";//(TODO)This should not be hardocded, should instead be fetched or made to be filled by user
+        
 
     const submit = (e) => {
         e.preventDefault();
@@ -203,7 +205,9 @@ export default function Register(){
                 name: name,
                 phone: phone,
                 email: email,
-                password: password
+                password: password,
+                hospital_id = "8b6eab5d-5eeb-4f9c-bab1-caa1e5dc4d37";//(TODO)This should not be hardocded, should instead be fetched or made to be filled by user
+        
             })
             .then(response => {
                 // If API request is successful
