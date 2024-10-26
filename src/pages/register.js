@@ -38,6 +38,7 @@ export default function Register(){
     const [phone,setPhone] = React.useState(null);
     const [email,setEmail] = React.useState(null);
     const [password,setPassword] = React.useState(null);
+    const hospital_id = "8b6eab5d-5eeb-4f9c-bab1-caa1e5dc4d37";//(TODO)This should not be hardocded, should instead be fetched or made to be filled by user
 
     const submit = (e) =>{
         e.preventDefault();
@@ -63,7 +64,21 @@ export default function Register(){
             setSuccess('Api is under construction');
             
         }
-       
+        axios.post('http://localhost:5000/signup', {
+            name,
+            phone,
+            email,
+            password,
+            hospital_id
+          })
+          .then((response) => {
+            setLoading(false);
+            setSuccess(response.data.message);
+          })
+          .catch((error) => {
+            setLoading(false);
+            setError(error.response.data.error);
+          });    
     }
     return (
         <div style={{backgroundColor:'#07071C',height:'100%'}}>
