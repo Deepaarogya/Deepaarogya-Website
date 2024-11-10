@@ -81,25 +81,28 @@ export default function DemoInput() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // setLoading(true);
+        setLoading(true);
         setError('');
-        // if(fileName!==null){
-        //     axios({
-        //         method:'post',
-        //         headers:headers,
-        //         url:apiurl,
-        //         data:{file:file}
-        //     }).then((res) => {
-        //         setResponse(res.data.predictions);
-        //         setLoading(false);
-        //     }).catch((error) => {
-        //         setError(error);
-        //     })
-        // }else{
-        //     setError('Please select file first');
-        //     setLoading(false);
-        // }
-        setShowExtractedImage(true);
+        if(fileName!==null){
+            const axiosConfig = {
+                method:'post',
+                headers:headers,
+                baseURL: 'http://ec2-65-0-75-30.ap-south-1.compute.amazonaws.com:8000/',
+                url:"/upload-prescription",
+                data:{file: file}
+            };
+            console.log('Axios Request Config:', axiosConfig);
+            axios(axiosConfig).then((res) => {
+                setResponse(res.data.predictions);
+                setLoading(false);
+                setShowExtractedImage(true);
+            }).catch((error) => {
+                setError(error);
+            })
+        } else {
+            setError('Please select file first');
+            setLoading(false);
+        }
     }
     const handleCloseModal = () => {
         setShowExtractedImage(false);
@@ -196,53 +199,6 @@ export default function DemoInput() {
                     </div>
                 </section>
             ) : (
-                // <Dialog
-                //     open={showExtractedImage}
-                //     onClose={handleCloseModal}
-                //     fullWidth
-                //     maxWidth="md"
-                //     PaperProps={{
-                //         style: {
-                //             height: '90%',  // Set height to 80%
-                //             width: '100%',   // Set width to 60%
-                //             margin: 'auto', // Center the modal
-                //         },
-                //     }}
-                // >
-                //     {/* <div style={{ position: 'relative', height: '100%', width: '100%' }}>
-                //         <IconButton
-                //             edge="end"
-                //             color="inherit"
-                //             onClick={handleCloseModal}
-                //             style={{ position: 'absolute', right: 16, top: 16 }}
-                //         >
-                //             <CloseIcon />
-                //         </IconButton>
-                //         <ExtractedResponse response={response} />
-                //     </div> */}
-                //     <div style={{ position: 'relative', height: '100%', width: '100%' }}>
-                //         <IconButton
-                //             edge="end"
-                //             color="inherit"
-                //             onClick={handleCloseModal}
-                //             style={{ position: 'absolute', right: 16, top: 16 }}
-                //         >
-                //             <CloseIcon />
-                //         </IconButton>
-                //         <div id="print-content" style={{ padding: '20px' }}>
-                //             <ExtractedResponse />
-                //         </div>
-                //         <Button
-                //             variant="contained"
-                //             color="primary"
-                //             onClick={handlePrint}
-                //             style={{ position: 'absolute', left: 16, bottom: 16 }}
-                //         >
-                //             <PrintIcon style={{ marginRight: 8 }} />
-                //             Print
-                //         </Button>
-                //     </div>
-                // </Dialog>
                 <React.Fragment>
                     <Dialog
                         fullWidth={true}
