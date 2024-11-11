@@ -71,26 +71,29 @@ export default function DemoInput() {
     }
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        setLoading(true);
-        setError('');
-        if(fileName!==null){
-            axios({
-                method:'post',
-                headers:headers,
-                url:apiurl,
-                data:{file:file}
-            }).then((res) => {
+    e.preventDefault();
+    setLoading(true);
+    setError('');
+    if (fileName !== null) {
+        const formData = new FormData();
+        formData.append('file', file);
+
+        axios.post(apiurl, formData)
+            .then((res) => {
+                console.log('resss',res);
                 setResponse(res.data.predictions);
                 setLoading(false);
-            }).catch((error) => {
-                setError(error);
             })
-        }else{
-            setError('Please select file first');
-            setLoading(false);
-        }
+            .catch((error) => {
+                setError(error.message);
+                setLoading(false);
+            });
+    } else {
+        setError('Please select a file first');
+        setLoading(false);
     }
+
+};
 
     return (
         <section className="pt-0">

@@ -206,7 +206,7 @@ export default function Register(){
                 phone: phone,
                 email: email,
                 password: password,
-                hospital_id = "8b6eab5d-5eeb-4f9c-bab1-caa1e5dc4d37";//(TODO)This should not be hardocded, should instead be fetched or made to be filled by user
+                hospital_id : "8b6eab5d-5eeb-4f9c-bab1-caa1e5dc4d37"//(TODO)This should not be hardocded, should instead be fetched or made to be filled by user
         
             })
             .then(response => {
