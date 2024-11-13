@@ -15,7 +15,7 @@ export default function Process() {
                 <div className="row ">
                     <div className="col-md-12">
                         <div className="title-box wow fadeInUp text-center">
-                            <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px'}}>Our AI Doctor Testing Process</h2>
+                            <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px'}}>Our Deepaarogya AI Testing Process</h2>
                         </div>
                     </div>
                 </div>
