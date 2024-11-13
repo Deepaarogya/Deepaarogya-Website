@@ -11,7 +11,7 @@ export default function Footer() {
                     <div className="row">
                         <div className="col-lg-4 col-md-6 col-sm-12 ">
                             <p className="footer-logo"><img alt="img" src={logo} width="220"/></p>
-                            {/* <h2 style={{color:'#fff'}}>AI Doctor</h2> */}
+                            {/* <h2 style={{color:'#fff'}}>Deepaarogya AI</h2> */}
                             <p className="footer-logo" style={{color:'#fff',fontSize:'17px',fontFamily:'Arial, Helvetica, sans-serif'}}>Leveraging AI Innovations for Lifesaving Solutions</p>
                             <ul className="info-share d-inline list-inline">
                                 <li className="list-inline-item"><a href="#"><i className="fa fa-facebook-f" style={{color:'#fff',fontSize:'20px'}}></i></a>

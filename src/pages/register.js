@@ -1,7 +1,9 @@
 import Stack from "@mui/material/Stack";
 import React from "react";
+import axios from "axios";
 import logo from '../images/new-logo.png';
 import HeightBox from "../components/heightBox";
+
 export default function Register(){
     var style = {
         service_2: {
@@ -42,11 +44,11 @@ export default function Register(){
     const submit = (e) =>{
         e.preventDefault();
         setLoading(true);
-        if(name===null || name.length<4){
+        if(name===null || name.length<3){
             setError('Please enter name')
             setLoading(false);
             return;
-        }else if(phone===null || phone.length!=10){
+        }else if(phone===null || phone.length!==10){
             setError('Please enter valid phone number, only 10 digit')
             setLoading(false);
             return;
@@ -60,11 +62,34 @@ export default function Register(){
             return;
         }else{
             setError(null);
-            setSuccess('Api is under construction');
-            
+            // Sending data to backend using Axios
+            axios.post('https://dashboard.deepaarogya.com/signup', {
+                name: name,
+                phone: phone,
+                email: email,
+                password: password
+            })
+            .then(response => {
+                setSuccess(response.data.message);
+                setLoading(false);
+            })
+            .catch(error => {
+                console.error("Error occurred during signup request:", error); // Debug log
+                if (error.response) {
+                    setError(error.response.data.error || 'An error occurred');
+                } else {
+                    setError('An error occurred. Please try again.');
+                }
+                setLoading(false);
+            });
         }
-       
     }
+
+    //         setSuccess('Api is under construction');
+            
+    //     }
+       
+    // }
     return (
         <div style={{backgroundColor:'#07071C',height:'100%'}}>
         <Stack direction={'column'}>
@@ -112,3 +137,6 @@ export default function Register(){
     </div>
     );
 }
+
+
+
