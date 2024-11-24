@@ -1,65 +1,6 @@
 import React from 'react';
 
-export default function ExtractedResponse() {
-  // Sample data to simulate API response
-  const response = {
-        "patient_info": {
-          "name": "RAM GOPAL",
-          "guardian_name": "KRISHNA KUMAR",
-          "dob": null,
-          "age": 40,
-          "sex": "M",
-          "occupation": "DRIVER",
-          "insurance_no": null,
-          "healthcare_provider": null,
-          "health_card_no": "BENGALURU, KARNATAKA",
-          "patient_id_no": null,
-          "address": "BENGALURU, KARNATAKA",
-          "cell_no": null
-        },
-        "diagnosis": {
-          "diagnosed_with": "ITCHING OVER NAPE OF NECK FOR 3 WEEKS Δ RING WORM?",
-          "blood_pressure": "124/86",
-          "pulse_rate": 74,
-          "weight": 66,
-          "allergies": null,
-          "disabilities": null
-        },
-        "drugs": [
-          {
-            "name": "DERMOCINOL",
-            "unit": "CREAM",
-            "dosage": "3 TIMES DAILY APPLY"
-          },
-          {
-            "name": "LEVOCETRIZINE 5MG.",
-            "unit": "TABLET",
-            "dosage": "ONCE DAILY X 5 DAYS"
-          },
-          {
-            "name": "KETOCONAZOLE 200 MG.",
-            "unit": "TABLET",
-            "dosage": "TWICE DAILY X 2 WEEKS"
-          },
-          {
-            "name": "CALAPURE-A",
-            "unit": "LOTIONS",
-            "dosage": "APPLY TWICE DAILY"
-          }
-        ],
-        "diet_to_follow": {
-          "diet_to_follow": "CONSUME FRESH FRUITS & VEGETABLES AVOID OILY & FRIED, SUGARY FOODS"
-        },
-        "history": {
-          "brief_history": "ITCHING OVER NAPE OF NECK FOR 3 WEEKS REDNESS & SWELLING OVER NAPE OF NECK FOR 2 WEEKS",
-          "follow_up_physician": "FOLLOW UP AFTER 1 MONTH"
-        },
-        "signature": {
-          "signature": "Signature and date: 26/09/24"
-        }
-      
-  };
-
+export default function ExtractedResponse({response}) {
   return (
     <div className="container">
       <div className="header">

@@ -84,16 +84,14 @@ export default function DemoInput() {
         setLoading(true);
         setError('');
         if(fileName!==null){
-            const axiosConfig = {
-                method:'post',
-                headers:headers,
-                baseURL: 'http://ec2-65-0-75-30.ap-south-1.compute.amazonaws.com:8000/',
-                url:"/upload-prescription",
-                data:{file: file}
-            };
-            console.log('Axios Request Config:', axiosConfig);
-            axios(axiosConfig).then((res) => {
-                setResponse(res.data.predictions);
+            const formData = new FormData();
+            const apiUrl = 'https://api.deepaarogya.com/upload-prescription/'
+            formData.append('file', file);
+    
+            axios.post(apiUrl, formData)
+                .then((res) => {
+                console.log('resss',res);
+                setResponse(res.data.pages[0]);
                 setLoading(false);
                 setShowExtractedImage(true);
             }).catch((error) => {
@@ -101,6 +99,7 @@ export default function DemoInput() {
             })
         } else {
             setError('Please select file first');
+            setLoading(false);
             setLoading(false);
         }
     }
@@ -209,7 +208,7 @@ export default function DemoInput() {
                     >
                         <DialogContent>
                             <div id="print-content" style={{ padding: '20px' }}>
-                                <ExtractedResponse />
+                                <ExtractedResponse response={response}/>
                             </div>
                         </DialogContent>
                         <DialogActions>
