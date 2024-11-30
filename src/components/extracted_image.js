@@ -104,9 +104,9 @@ export default function ExtractedResponse({response}) {
             <tbody>
             {response.drugs.map((medication, index) => (
                 <tr key={index}>
-                <td>{index + 1}. {medication.name}</td>
-                <td>{medication.unit}</td>
-                <td>{medication.dosage}</td>
+                <td style={{ color: 'green', fontStyle: 'italic', fontFamily: 'Arial, Helvetica, sans-serif' }}>{index + 1}. {medication.name}</td>
+                <td style={{ color: 'green', fontStyle: 'italic', fontFamily: 'Arial, Helvetica, sans-serif' }}>{medication.unit}</td>
+                <td style={{ color: 'green', fontStyle: 'italic', fontFamily: 'Arial, Helvetica, sans-serif' }}>{medication.dosage}</td>
                 </tr>
             ))}
             </tbody>
