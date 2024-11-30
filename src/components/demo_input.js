@@ -145,11 +145,8 @@ export default function DemoInput() {
                                         <Avatar style={style.uploadIcon}>
                                             <CloudUploadOutlinedIcon style={{ color: '#fff', fontSize: '50px', fontFamily: 'Arial, Helvetica, sans-serif' }} />
                                         </Avatar>
-                                        <div style={style.titleText}>Upload a PNG or JPG File</div>
 
-                                        <button onClick={handleInputClick} style={style.uploadBtn}>
-                                            Upload a file
-                                        </button>
+                                        <button onClick={handleInputClick} style={style.uploadBtn}>Upload a PNG or JPG File</button>
                                         <FormControl component={'div'} fullWidth={true} encType="multipart/form-data">
                                             <input type='file' ref={hiddenFileInput}
                                                 style={{ display: 'none' }}
@@ -157,7 +154,10 @@ export default function DemoInput() {
                                                 accept="image/png, image/jpeg, image/jpg"
                                             />
                                         </FormControl>
-                                        <span style={{ fontSize: '14px', color: '#fff', fontFamily: 'Arial, Helvetica, sans-serif' }}>{fileName}</span>
+                                        <Stack>
+                                            <span style={{ color: '#fff', fontWeight: 600, fontSize: 18, paddingLeft: 40 }}>{'Selected File'}</span>
+                                            {image && <img src={image} style={{ width: 180, height: 200, marginTop: 20 }} />}
+                                        </Stack>
                                     </Stack>
                                     <div>
                                         <button id="submit-4" onClick={handleSubmit}
@@ -167,31 +167,6 @@ export default function DemoInput() {
                                         </button>
                                     </div>
                                     <HeightBox height={40} />
-
-                                    <Stack direction={'row'} justifyContent={'space-between'} style={style.resultBox}>
-                                        <Stack>
-                                            <span style={{ color: '#fff', fontWeight: 600, fontSize: 18, paddingLeft: 40 }}>{'Image'}</span>
-                                            {image && <img src={image} style={{ width: 180, height: 200, marginTop: 20 }} />}
-                                        </Stack>
-                                        <Stack>
-                                            <div><span style={{ color: '#fff', fontWeight: 600, fontSize: 18, marginLeft: 22 }}>{'Result'}</span></div>
-                                            {!isLoading && response != null &&
-                                                <ul style={{ listStyle: 'none', paddingRight: 20 }}>
-                                                    <li style={{ marginTop: 40 }}>
-                                                        <span style={style.resultStyle}>
-                                                            {response && response.labelName.replace('_', ' ')}
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span style={style.resultStyle}>
-                                                            {response && parseInt(response.score * 100)}
-                                                            %</span>
-                                                    </li>
-                                                </ul>
-                                            }
-
-                                        </Stack>
-                                    </Stack>
                                 </div>
                             </div>
                         </div>
