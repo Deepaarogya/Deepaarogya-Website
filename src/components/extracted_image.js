@@ -1,6 +1,52 @@
 import React from 'react';
 
-export default function ExtractedResponse({response}) {
+// Styles for static and editable fields
+const staticTextStyles = {
+  color: 'green',
+  fontStyle: 'italic',
+  fontFamily: 'Arial, Helvetica, sans-serif',
+  float: 'right',
+};
+
+// Styles for static and editable fields
+const tdTextStyles = {
+  color: 'green',
+  fontStyle: 'italic',
+  fontFamily: 'Arial, Helvetica, sans-serif',
+};
+
+const inputStyles = {
+  color: 'green',
+  fontStyle: 'italic',
+  fontFamily: 'Arial, Helvetica, sans-serif',
+  border: '1px solid #ddd',
+  padding: '5px',
+  width: '100%',
+};
+
+export default function ExtractedResponse({ response, isEditing, onInputChange }) {
+  // A helper function to render editable or static fields
+  const renderField = (label, value, fieldName) => {
+    if (isEditing) {
+      return (
+        <input
+          type="text"
+          name={fieldName}
+          value={value || ''}
+          onChange={(e) => 
+            onInputChange(fieldName, e.target.value)
+          }
+          style={inputStyles}
+        />
+      );
+    }
+    return (
+      <span style={staticTextStyles}>
+        {value || '-'}
+      </span>
+    );
+  };
+
   return (
     <div className="container">
       <div className="header">
@@ -11,126 +57,162 @@ export default function ExtractedResponse({response}) {
       <div className="section">
         <div>
           <strong>Patient's Name:</strong>
-          <span style={{color:'green',fontStyle:"italic",fontFamily:'Arial, Helvetica, sans-serif', float:'right'}}> {response.patient_info.name}</span>
+          {renderField('Patient Name', response.patient_info.name, 'name')}
         </div>
         <div>
           <strong>S/D/O/W/O:</strong>
-          <span style={{color:'green',fontStyle:"italic",fontFamily:'Arial, Helvetica, sans-serif', float:'right'}}> {response.patient_info.guardian_name}</span>
+          {renderField('Guardian Name', response.patient_info.guardian_name, 'guardian_name')}
         </div>
         <div>
           <strong>Date of Birth:</strong>
-          <span style={{color:'green',fontStyle:"italic",fontFamily:'Arial, Helvetica, sans-serif', float:'right'}}> {response.patient_info.dob}</span>
+          {renderField('DOB', response.patient_info.dob, 'dob')}
         </div>
         <div>
           <strong>Age:</strong>
-          <span style={{color:'green',fontStyle:"italic",fontFamily:'Arial, Helvetica, sans-serif', float:'right'}}> {response.patient_info.age}</span>
+          {renderField('Age', response.patient_info.age, 'age')}
         </div>
         <div>
           <strong>Sex:</strong>
-          <span style={{color:'green',fontStyle:"italic",fontFamily:'Arial, Helvetica, sans-serif', float:'right'}}> {response.patient_info.sex}</span>
+          {renderField('Sex', response.patient_info.sex, 'sex')}
         </div>
         <div>
           <strong>Occupation:</strong>
-          <span style={{color:'green',fontStyle:"italic",fontFamily:'Arial, Helvetica, sans-serif', float:'right'}}> {response.patient_info.occupation}</span>
+          {renderField('Occupation', response.patient_info.occupation, 'occupation')}
         </div>
         <div>
           <strong>Health Insurance No:</strong>
-          <span style={{color:'green',fontStyle:"italic",fontFamily:'Arial, Helvetica, sans-serif', float:'right'}}> {response.patient_info.insurance_no}</span>
+          {renderField('Insurance No', response.patient_info.insurance_no, 'insurance_no')}
         </div>
         <div>
           <strong>Health Care Provider:</strong>
-          <span style={{color:'green',fontStyle:"italic",fontFamily:'Arial, Helvetica, sans-serif', float:'right'}}> {response.patient_info.healthcare_providern}</span>
+          {renderField('Healthcare Provider', response.patient_info.healthcare_provider, 'healthcare_provider')}
         </div>
         <div>
           <strong>Health Card Number:</strong>
-          <span style={{color:'green',fontStyle:"italic",fontFamily:'Arial, Helvetica, sans-serif', float:'right'}}> {response.patient_info.health_card_no}</span>
+          {renderField('Health Card No', response.patient_info.health_card_no, 'health_card_no')}
         </div>
         <div>
           <strong>Patient ID No:</strong>
-          <span style={{color:'green',fontStyle:"italic",fontFamily:'Arial, Helvetica, sans-serif', float:'right'}}> {response.patient_info.patient_id_no}</span>
+          {renderField('Patient ID No', response.patient_info.patient_id_no, 'patient_id_no')}
         </div>
         <div>
           <strong>Patient Address:</strong>
-          <span style={{color:'green',fontStyle:"italic",fontFamily:'Arial, Helvetica, sans-serif', float:'right'}}> {response.patient_info.address}</span>
+          {renderField('Address', response.patient_info.address, 'address')}
         </div>
         <div>
           <strong>Cell No:</strong>
-          <span style={{color:'green',fontStyle:"italic",fontFamily:'Arial, Helvetica, sans-serif', float:'right'}}> {response.patient_info.cell_no}</span>
+          {renderField('Cell No', response.patient_info.cell_no, 'cell_no')}
         </div>
       </div>
 
       <div className="section">
         <div>
           <strong>Diagnosed With:</strong>
-          <span style={{color:'green',fontStyle:"italic",fontFamily:'Arial, Helvetica, sans-serif'}}> {response.diagnosis.diagnosed_with}</span>
+          {renderField('Diagnosed With', response.diagnosis.diagnosed_with, 'diagnosed_with')}
         </div>
       </div>
 
       <div className="section">
         <div>
           <strong>Blood Pressure:</strong>
-          <span style={{color:'green',fontStyle:"italic",fontFamily:'Arial, Helvetica, sans-serif', float:'right'}}> {response.diagnosis.blood_pressure}</span>
+          {renderField('Blood Pressure', response.diagnosis.blood_pressure, 'blood_pressure')}
         </div>
         <div>
           <strong>Pulse Rate:</strong>
-          <span style={{color:'green',fontStyle:"italic",fontFamily:'Arial, Helvetica, sans-serif', float:'right'}}> {response.diagnosis.pulse_rate}</span>
+          {renderField('Pulse Rate', response.diagnosis.pulse_rate, 'pulse_rate')}
         </div>
         <div>
-          <strong>weight:</strong>
-          <span style={{color:'green',fontStyle:"italic",fontFamily:'Arial, Helvetica, sans-serif', float:'right'}}> {response.diagnosis.weight}</span>
+          <strong>Weight:</strong>
+          {renderField('Weight', response.diagnosis.weight, 'weight')}
         </div>
       </div>
 
       <div className="section">
         <div>
           <strong>Allergies:</strong>
-          <span style={{color:'green',fontStyle:"italic",fontFamily:'Arial, Helvetica, sans-serif'}}> {response.diagnosis.allergies}</span>
+          {renderField('Allergies', response.diagnosis.allergies, 'allergies')}
         </div>
         <div>
           <strong>Disabilities if any:</strong>
-          <span style={{color:'green',fontStyle:"italic",fontFamily:'Arial, Helvetica, sans-serif'}}> {response.diagnosis.disabilities}</span>
+          {renderField('Disabilities', response.diagnosis.disabilities, 'disabilities')}
         </div>
       </div>
 
       <div className="section">
         <table className="medication-table">
-            <thead>
+          <thead>
             <tr>
-                <th>Drugs</th>
-                <th>Unit (Tablet / Syrup)</th>
-                <th>Dosage (Per Day)</th>
+              <th>Drugs</th>
+              <th>Unit (Tablet / Syrup)</th>
+              <th>Dosage (Per Day)</th>
             </tr>
-            </thead>
-            <tbody>
+          </thead>
+          <tbody>
             {response.drugs.map((medication, index) => (
-                <tr key={index}>
-                <td style={{ color: 'green', fontStyle: 'italic', fontFamily: 'Arial, Helvetica, sans-serif' }}>{index + 1}. {medication.name}</td>
-                <td style={{ color: 'green', fontStyle: 'italic', fontFamily: 'Arial, Helvetica, sans-serif' }}>{medication.unit}</td>
-                <td style={{ color: 'green', fontStyle: 'italic', fontFamily: 'Arial, Helvetica, sans-serif' }}>{medication.dosage}</td>
-                </tr>
+              <tr key={index}>
+                <td style={tdTextStyles}>
+                  {isEditing ? (
+                    <input
+                      type="text"
+                      name={`medication_name_${index}`}
+                      value={medication.name}
+                      onChange={onInputChange}
+                      style={inputStyles}
+                    />
+                  ) : (
+                    `${index + 1}. ${medication.name}`
+                  )}
+                </td>
+                <td style={tdTextStyles}>
+                  {isEditing ? (
+                    <input
+                      type="text"
+                      name={`medication_unit_${index}`}
+                      value={medication.unit}
+                      onChange={onInputChange}
+                      style={inputStyles}
+                    />
+                  ) : (
+                    medication.unit
+                  )}
+                </td>
+                <td style={tdTextStyles}>
+                  {isEditing ? (
+                    <input
+                      type="text"
+                      name={`medication_dosage_${index}`}
+                      value={medication.dosage}
+                      onChange={onInputChange}
+                      style={inputStyles}
+                    />
+                  ) : (
+                    medication.dosage
+                  )}
+                </td>
+              </tr>
             ))}
-            </tbody>
+          </tbody>
         </table>
       </div>
 
       <div className="section">
         <div>
           <strong>Diet To Follow:</strong>
-          <span style={{color:'green',fontStyle:"italic",fontFamily:'Arial, Helvetica, sans-serif'}}> {response.diet_to_follow.diet_to_follow}</span>
+          {renderField('Diet to Follow', response.diet_to_follow.diet_to_follow, 'diet_to_follow')}
         </div>
       </div>
 
       <div className="section">
         <div>
-          <strong>Brief history of patient</strong>
-          <span style={{color:'green',fontStyle:"italic",fontFamily:'Arial, Helvetica, sans-serif'}}> {response.history.brief_history}</span>
+          <strong>Brief history of patient:</strong>
+          {renderField('Brief History', response.history.brief_history, 'brief_history')}
         </div>
       </div>
 
       <div className="section">
         <div>
           <strong>Follow Up Physician:</strong>
-          <span style={{color:'green',fontStyle:"italic",fontFamily:'Arial, Helvetica, sans-serif'}}> {response.history.follow_up_physician}</span>
+          {renderField('Follow Up Physician', response.history.follow_up_physician, 'follow_up_physician')}
         </div>
       </div>
     </div>
