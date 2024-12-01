@@ -68,6 +68,7 @@ export default function DemoInput() {
     const [isLoading, setLoading] = React.useState(false);
     const [showExtractedImage, setShowExtractedImage] = React.useState(false);
     const [open, setOpen] = React.useState(false);
+    const [isEditing, setIsEditing] = React.useState(false);
 
     const handleInputClick = event => {
         hiddenFileInput.current.click();
@@ -108,6 +109,33 @@ export default function DemoInput() {
         setResponse(null); // Clear the response if needed
     };
 
+    // Handle the 'Edit' button click
+    const handleEditClick = () => {
+        setIsEditing(true);
+    };
+
+    // Handle the 'Save' button click
+    const handleSaveClick = () => {
+        // API call to save the data, for now, just log it
+        console.log("Updated data:", response);
+        // Toggle editing mode off
+        setIsEditing(false);
+        // You can make the API call here to persist the changes
+        // e.g., updateDataAPI(responseData);
+    };
+
+    // Function to update the response data when an input changes
+    const handleInputChange = (field, value) => {
+        console.log('input change', value);
+        setResponse((prevState) => ({
+            ...prevState,
+            patient_info: {
+                ...prevState.patient_info,
+                [field]: value,
+            },
+        }));
+    };
+
     const handlePrint = () => {
         const printWindow = window.open('', '_blank');
         printWindow.document.write(`
@@ -132,7 +160,6 @@ export default function DemoInput() {
     return (
         <div>
             {!showExtractedImage ? (
-
                 <section className="pt-0">
                     <div className="container">
                         <div className="row align-items-center ">
@@ -183,21 +210,39 @@ export default function DemoInput() {
                     >
                         <DialogContent>
                             <div id="print-content" style={{ padding: '20px' }}>
-                                <ExtractedResponse response={response}/>
+                                <ExtractedResponse
+                                    response={response}
+                                    isEditing={isEditing}
+                                    onInputChange={handleInputChange} // Pass the input change handler
+                                />
                             </div>
                         </DialogContent>
                         <DialogActions>
-                            <Button
-                                variant="contained"
-                                color="primary"
-                                onClick={handlePrint}
-                            >
-                                <PrintIcon style={{ marginRight: 8 }} />
-                                Print
-                            </Button>
-                            <Button onClick={handleCloseModal} autoFocus>
-                                Close
-                            </Button>
+                            {isEditing ? (
+                                <>
+                                    <Button
+                                        variant="contained"
+                                        color="primary"
+                                        onClick={handleSaveClick}
+                                    >
+                                        Save
+                                    </Button>
+                                    <Button onClick={() => setIsEditing(false)}>Cancel</Button>
+                                </>
+                            ) : (
+                                <>
+                                    <Button
+                                        variant="contained"
+                                        color="primary"
+                                        onClick={handlePrint}
+                                    >
+                                        <PrintIcon style={{ marginRight: 8 }} />
+                                        Print
+                                    </Button>
+                                    <Button onClick={handleEditClick}>Edit</Button>
+                                    <Button onClick={handleCloseModal} autoFocus>Close</Button>
+                                </>
+                            )}
                         </DialogActions>
                     </Dialog>
                 </React.Fragment>
