@@ -119,15 +119,12 @@ export default function DemoInput() {
     // Handle the 'Save' button click
     const handleSaveClick = () => {
         // API call to save the data, for now, just log it
-        console.log("Updated data:", response);
-        const apiUrl = 'https://api.deepaarogya.com/update_extracted_prescription/'
+        setIsEditing(false);
+        const apiUrl = 'https://api.deepaarogya.com/edit-prescription/'
         const formData = new FormData();
-        formData.append('response', response);
-        setLoading(true);
+        formData.append('data', response);
         axios.post(apiUrl, formData)
                 .then((res) => {
-                console.log('resss',res);
-                setIsEditing(false);
             }).catch((error) => {
                 setError(error);
             })
@@ -228,10 +225,10 @@ export default function DemoInput() {
                                                 accept="image/png, image/jpeg, image/jpg"
                                             />
                                         </FormControl>
-                                        <Stack>
+                                        { image &&  <Stack>
                                             <span style={{ color: '#fff', fontWeight: 600, fontSize: 18, paddingLeft: 40 }}>{'Selected File'}</span>
-                                            {image && <img src={image} style={{ width: 180, height: 200, marginTop: 20 }} />}
-                                        </Stack>
+                                            <img src={image} style={{ width: 180, height: 200, marginTop: 20 }} />
+                                        </Stack> }
                                     </Stack>
                                     <div>
                                         <button id="submit-4" onClick={handleSubmit}
