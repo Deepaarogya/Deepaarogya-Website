@@ -121,13 +121,12 @@ export default function DemoInput() {
         // API call to save the data, for now, just log it
         setIsEditing(false);
         const apiUrl = 'https://api.deepaarogya.com/edit-prescription/'
-        const formData = new FormData();
-        formData.append('data', response);
-        axios.post(apiUrl, formData)
-                .then((res) => {
-            }).catch((error) => {
-                setError(error);
-            })
+        axios.post(apiUrl, {'data': response})
+            .then((res) => {
+                console.log('updated', res);
+        }).catch((error) => {
+            setError(error);
+        })
     };
 
     // Function to update the response data when an input changes
