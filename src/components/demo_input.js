@@ -88,6 +88,7 @@ export default function DemoInput() {
             const formData = new FormData();
             const apiUrl = 'https://api.deepaarogya.com/upload-prescription/'
             formData.append('file', file);
+            formData.append('doctor_id', 'demo-doctor')
     
             axios.post(apiUrl, formData)
                 .then((res) => {
