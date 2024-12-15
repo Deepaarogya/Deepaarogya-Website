@@ -57,84 +57,84 @@ export default function ExtractedResponse({ response, isEditing, onInputChange }
       <div className="section">
         <div>
           <strong>Patient's Name:</strong>
-          {renderField('Patient Name', response.patient_info.name, 'name')}
+          {renderField('Patient Name', response.patient_info.name, 'patient_info.name')}
         </div>
         <div>
           <strong>S/D/O/W/O:</strong>
-          {renderField('Guardian Name', response.patient_info.guardian_name, 'guardian_name')}
+          {renderField('Guardian Name', response.patient_info.guardian_name, 'patient_info.guardian_name')}
         </div>
         <div>
           <strong>Date of Birth:</strong>
-          {renderField('DOB', response.patient_info.dob, 'dob')}
+          {renderField('DOB', response.patient_info.dob, 'patient_info.dob')}
         </div>
         <div>
           <strong>Age:</strong>
-          {renderField('Age', response.patient_info.age, 'age')}
+          {renderField('Age', response.patient_info.age, 'patient_info.age')}
         </div>
         <div>
           <strong>Sex:</strong>
-          {renderField('Sex', response.patient_info.sex, 'sex')}
+          {renderField('Sex', response.patient_info.sex, 'patient_info.sex')}
         </div>
         <div>
           <strong>Occupation:</strong>
-          {renderField('Occupation', response.patient_info.occupation, 'occupation')}
+          {renderField('Occupation', response.patient_info.occupation, 'patient_info.occupation')}
         </div>
         <div>
           <strong>Health Insurance No:</strong>
-          {renderField('Insurance No', response.patient_info.insurance_no, 'insurance_no')}
+          {renderField('Insurance No', response.patient_info.insurance_no, 'patient_info.insurance_no')}
         </div>
         <div>
           <strong>Health Care Provider:</strong>
-          {renderField('Healthcare Provider', response.patient_info.healthcare_provider, 'healthcare_provider')}
+          {renderField('Healthcare Provider', response.patient_info.healthcare_provider, 'patient_info.healthcare_provider')}
         </div>
         <div>
           <strong>Health Card Number:</strong>
-          {renderField('Health Card No', response.patient_info.health_card_no, 'health_card_no')}
+          {renderField('Health Card No', response.patient_info.health_card_no, 'patient_info.health_card_no')}
         </div>
         <div>
           <strong>Patient ID No:</strong>
-          {renderField('Patient ID No', response.patient_info.patient_id_no, 'patient_id_no')}
+          {renderField('Patient ID No', response.patient_info.patient_id_no, 'patient_info.patient_id_no')}
         </div>
         <div>
           <strong>Patient Address:</strong>
-          {renderField('Address', response.patient_info.address, 'address')}
+          {renderField('Address', response.patient_info.address, 'patient_info.address')}
         </div>
         <div>
           <strong>Cell No:</strong>
-          {renderField('Cell No', response.patient_info.cell_no, 'cell_no')}
+          {renderField('Cell No', response.patient_info.cell_no, 'patient_info.cell_no')}
         </div>
       </div>
 
       <div className="section">
         <div>
           <strong>Diagnosed With:</strong>
-          {renderField('Diagnosed With', response.diagnosis.diagnosed_with, 'diagnosed_with')}
+          {renderField('Diagnosed With', response.diagnosis.diagnosed_with, 'diagnosis.diagnosed_with')}
         </div>
       </div>
 
       <div className="section">
         <div>
           <strong>Blood Pressure:</strong>
-          {renderField('Blood Pressure', response.diagnosis.blood_pressure, 'blood_pressure')}
+          {renderField('Blood Pressure', response.diagnosis.blood_pressure, 'diagnosis.blood_pressure')}
         </div>
         <div>
           <strong>Pulse Rate:</strong>
-          {renderField('Pulse Rate', response.diagnosis.pulse_rate, 'pulse_rate')}
+          {renderField('Pulse Rate', response.diagnosis.pulse_rate, 'diagnosis.pulse_rate')}
         </div>
         <div>
           <strong>Weight:</strong>
-          {renderField('Weight', response.diagnosis.weight, 'weight')}
+          {renderField('Weight', response.diagnosis.weight, 'diagnosis.weight')}
         </div>
       </div>
 
       <div className="section">
         <div>
           <strong>Allergies:</strong>
-          {renderField('Allergies', response.diagnosis.allergies, 'allergies')}
+          {renderField('Allergies', response.diagnosis.allergies, 'diagnosis.allergies')}
         </div>
         <div>
           <strong>Disabilities if any:</strong>
-          {renderField('Disabilities', response.diagnosis.disabilities, 'disabilities')}
+          {renderField('Disabilities', response.diagnosis.disabilities, 'diagnosis.disabilities')}
         </div>
       </div>
 
@@ -151,43 +151,13 @@ export default function ExtractedResponse({ response, isEditing, onInputChange }
             {response.drugs.map((medication, index) => (
               <tr key={index}>
                 <td style={tdTextStyles}>
-                  {isEditing ? (
-                    <input
-                      type="text"
-                      name={`medication_name_${index}`}
-                      value={medication.name}
-                      onChange={onInputChange}
-                      style={inputStyles}
-                    />
-                  ) : (
-                    `${index + 1}. ${medication.name}`
-                  )}
+                  {renderField('', medication.name, `drugs[${index}].name`)}
                 </td>
                 <td style={tdTextStyles}>
-                  {isEditing ? (
-                    <input
-                      type="text"
-                      name={`medication_unit_${index}`}
-                      value={medication.unit}
-                      onChange={onInputChange}
-                      style={inputStyles}
-                    />
-                  ) : (
-                    medication.unit
-                  )}
+                  {renderField('', medication.unit, `drugs[${index}].unit`)}
                 </td>
                 <td style={tdTextStyles}>
-                  {isEditing ? (
-                    <input
-                      type="text"
-                      name={`medication_dosage_${index}`}
-                      value={medication.dosage}
-                      onChange={onInputChange}
-                      style={inputStyles}
-                    />
-                  ) : (
-                    medication.dosage
-                  )}
+                  {renderField('', medication.dosage, `drugs[${index}].dosage`)}
                 </td>
               </tr>
             ))}
@@ -198,21 +168,21 @@ export default function ExtractedResponse({ response, isEditing, onInputChange }
       <div className="section">
         <div>
           <strong>Diet To Follow:</strong>
-          {renderField('Diet to Follow', response.diet_to_follow.diet_to_follow, 'diet_to_follow')}
+          {renderField('Diet to Follow', response.diet_to_follow.diet_to_follow, 'diet_to_follow.diet_to_follow')}
         </div>
       </div>
 
       <div className="section">
         <div>
           <strong>Brief history of patient:</strong>
-          {renderField('Brief History', response.history.brief_history, 'brief_history')}
+          {renderField('Brief History', response.history.brief_history, 'history.brief_history')}
         </div>
       </div>
 
       <div className="section">
         <div>
           <strong>Follow Up Physician:</strong>
-          {renderField('Follow Up Physician', response.history.follow_up_physician, 'follow_up_physician')}
+          {renderField('Follow Up Physician', response.history.follow_up_physician, 'history.follow_up_physician')}
         </div>
       </div>
     </div>

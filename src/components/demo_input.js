@@ -99,6 +99,7 @@ export default function DemoInput() {
             }).catch((error) => {
                 setError(error);
             })
+
         } else {
             setError('Please select file first');
             setLoading(false);
@@ -119,22 +120,67 @@ export default function DemoInput() {
     const handleSaveClick = () => {
         // API call to save the data, for now, just log it
         console.log("Updated data:", response);
-        // Toggle editing mode off
-        setIsEditing(false);
-        // You can make the API call here to persist the changes
-        // e.g., updateDataAPI(responseData);
+        const apiUrl = 'https://api.deepaarogya.com/update_extracted_prescription/'
+        const formData = new FormData();
+        formData.append('response', response);
+        setLoading(true);
+        axios.post(apiUrl, formData)
+                .then((res) => {
+                console.log('resss',res);
+                setIsEditing(false);
+            }).catch((error) => {
+                setError(error);
+            })
     };
 
     // Function to update the response data when an input changes
-    const handleInputChange = (field, value) => {
-        console.log('input change', value);
-        setResponse((prevState) => ({
-            ...prevState,
-            patient_info: {
-                ...prevState.patient_info,
-                [field]: value,
-            },
-        }));
+    const handleInputChange = (fieldName, newValue) => {
+        const keys = fieldName.split('.');
+        setResponse((prevResponse) => {
+            let updatedResponse = { ...prevResponse };  // Shallow copy of the previous response
+            let nestedObj = updatedResponse;  // Start from the root object
+        
+            keys.forEach((key, index) => {
+              // Check if this key contains an array index (like 'drugs[0]')
+              if (key.includes('[')) {
+                // Extract the array name (e.g., 'drugs')
+                const arrayKey = key.split('[')[0];
+                // Extract the array index (e.g., '0' from 'drugs[0]')
+                const indexKey = key.match(/\[(\d+)\]/)[1];
+        
+                // Now, handle the case where the key refers to an array element
+                if (!Array.isArray(nestedObj[arrayKey])) {
+                  console.error(`Array ${arrayKey} does not exist`);
+                  return;
+                }
+        
+                // If we're at the last key in the path, we want to update the array element
+                if (index === keys.length - 1) {
+                  nestedObj[arrayKey] = nestedObj[arrayKey].map((item, i) => {
+                    if (i === parseInt(indexKey, 10)) {
+                      // Update the specific field inside the array element
+                      const updatedItem = { ...item };
+                      updatedItem[keys[1]] = newValue;  // keys[1] would be 'name', 'unit', or 'dosage'
+                      return updatedItem;
+                    }
+                    return item;
+                  });
+                } else {
+                  // If not the last key, continue traversing the object/array
+                  nestedObj = nestedObj[arrayKey][parseInt(indexKey, 10)];
+                }
+              } else {
+                // Regular case for non-array fields
+                if (index === keys.length - 1) {
+                  nestedObj[key] = newValue;  // Final key, so we update the value
+                } else {
+                  nestedObj = nestedObj[key];  // Traverse deeper into the nested object
+                }
+              }
+            });
+        
+            return updatedResponse;
+          });
     };
 
     const handlePrint = () => {
