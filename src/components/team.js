@@ -9,7 +9,7 @@ import team1 from '../images/pandey.png';
 import team3 from '../images/Shivani.png';
 import team4 from '../images/Dipali.png';
 import team5 from '../images/Prabhu.png';
-import team6 from '../images/Abhishek_Yadav.png';
+import team6 from '../images/Jigar Dave.png';
 import team2 from '../images/Akash.png';
 import Stack from '@mui/material/Stack';
 import HeightBox from './heightBox';
@@ -80,8 +80,8 @@ export default function Team(){
                         />
                         <CardContent>
                             <Stack alignItems={'center'}>
-                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Abhishek Yadav</span><br/>
-                                <span style={{fontSize:16,color:'#fff'}}>Lead Data Scientist</span>
+                                <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Jigar dave</span><br/>
+                                <span style={{fontSize:16,color:'#fff'}}>Lead Backend Engineer</span>
                             </Stack>
                         </CardContent>
                     </Card>
@@ -98,7 +98,7 @@ export default function Team(){
                         <CardContent>
                             <Stack alignItems={'center'}>
                                 <span style={{fontWeight:'bold',fontSize:20,color:'#fff'}}>Dr. Shivani Fotedar</span><br/>
-                                <span style={{fontSize:16,color:'#fff'}}>Co-founder (Medical) </span>
+                                <span style={{fontSize:16,color:'#fff'}}>Medical Advisor </span>
                             </Stack>
                         </CardContent>
                     </Card>

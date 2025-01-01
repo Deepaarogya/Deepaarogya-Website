@@ -19,12 +19,9 @@ export  default function Service() {
                         <div className="service-box d-inherit p-4 my-3 wow fadeInUp text-center" style={{background:'#121228'}}>
                             <img className="fancy-list-img" src={service1} alt="fancy-list"/>
                             <div className="service-detail align-self-center">
-                                <h4 className="mb-2" style={{color:'#fff'}}>X-rays</h4>
+                                <h4 className="mb-2" style={{color:'#fff'}}>Handwriiten Prescription</h4>
                                 <p style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif',letterSpacing:'0.5px'}}>
-                                    X-rays, being dense and cumbersome, can make it challenging to swiftly review a patient's medical history and
-                                    treament plan.
-                                    Our AI models proficiently analyze these records,extracting crucial information and presenting it in a user-friendly format. </p>
-
+                                Illegible handwriting causes medication errors, while manual prescription entry is inefficient. Lack of standard formats leads to inconsistencies and errors. Paper-based systems are environmentally harmful and risk data loss, threatening patient safety and operational efficiency. Digital solutions ensure accuracy, sustainability, and reliability, addressing these critical challenges effectively.</p>
                             </div>
                         </div>
                     </div>
@@ -34,10 +31,7 @@ export  default function Service() {
                             <img className="fancy-list-img" src={service2} alt="fancy-list"/>
                                 <div className="service-detail align-self-center">
                                     <h4 className="mb-2" style={{color:'#fff'}}>Hospitals</h4>
-                                    <p style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif',letterSpacing:'0.5px'}}>Under considerable time and financial constraints, hospitals may struggle to 
-                                    address patients' concerns in detail, leaving them uninformed about their conditions. Our AI model offers round-the-clock bedside support to bridge this gap.
- </p>
-
+                                    <p style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif',letterSpacing:'0.5px'}}>Adopting cutting-edge technology boosts efficiency, saves time, and reduces administrative burdens. It enhances accuracy, minimizes errors, and improves patient safety by reducing medication risks. Streamlined electronic health records (EHRs) enhance data accessibility and care coordination. Embracing innovation reflects professionalism, fostering trust, credibility, and effective record-keeping.</p>
                                 </div>
                         </div>
                     </div>
@@ -62,19 +56,18 @@ export  default function Service() {
                     </div>
                     <div className=" fadeInUp  col-sm-12 col-lg-6 col-md-6 wow align-items-center">
                         <div className="title-box wow fadeInUp text-left">
-                            <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px'}}> AI Solutions for Early Disease Detection and Improved Patient Outcomes.</h2>
-                            <p style={{color:'#fff',fontSize:'18px'}}>Artificial intelligence (AI) is revolutionizing the healthcare industry, and nowhere is this 
-                            more evident than in the field of disease detection. AI-powered solutions can help to detect diseases earlier, more accurately, and more efficiently than traditional methods.</p>
-                    
+                            <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px'}}> AI based OCR software that extract data from Handwriiten prescription</h2>
+                            <p style={{color:'#fff',fontSize:'18px'}}>Our AI model is designed to extract data from handwritten prescriptions, enabling doctors to quickly access patient information and provide accurate treatment.Utilizes state of art AI and image recognition technology to digitize handwritten prescriptions.
+                                It accurately transcribes patient information, medication names, dosages, frequency of uptake, special instructions and many more. We have trained our model for maximum number of medical information.
+                                Easy edit and customisation of prescriptions. Seamless integration with electronic health records (EHRs)</p>
                         </div>
                         <div className="text-left">
                             <ul className="iq-list" style={{color:'#fff',fontSize:'16px'}}>
-                                <li><i className="fa fa-check-square-o"></i> <span>Identifies multiple anomalies in chest X-rays</span></li>
-                                <li><i className="fa fa-check-square-o"></i>
-                                    <span>Used by 10+ Doctors</span></li>
-                                <li><i className="fa fa-check-square-o"></i> <span>Trained on over 1 million X-ray Scans</span></li>
-                                <li><i className="fa fa-check-square-o"></i> <span>Provides real-time reports to physicians</span></li>
-                                <li><i className="fa fa-check-square-o"></i> <span>Highlights radiological indicators of diseases, such as TB, lung cancer, and heart failure.</span></li>    
+                                <li><i className="fa fa-check-square-o"></i> <span>Handwriting Recognition</span></li>
+                                <li><i className="fa fa-check-square-o"></i><span>Used by 10+ Doctors</span></li>
+                                <li><i className="fa fa-check-square-o"></i> <span>Provides real-time reports to physicians and save data to hospital database</span></li>
+                                <li><i className="fa fa-check-square-o"></i> <span>Prescription Editing & Customization features</span></li>
+                                <li><i className="fa fa-check-square-o"></i> <span>EHR Integration and Data Security & Privacy</span></li>    
                             </ul>
                         </div>
                     </div>

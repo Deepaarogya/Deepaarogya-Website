@@ -25,7 +25,7 @@ export default function Process() {
                              data-wow-delay="0.6s">
                             <div className="circle-effect"><img src={upload} alt="fancybox"/></div>
                             <h5 className="mb-2" style={{color:'#fff',fontSize:'24px',fontFamily:'Arial, Helvetica, sans-serif'}}>Upload</h5>
-                            <p className="mb-0" style={{color:'#fff',fontSize:'16px',fontFamily:'Arial, Helvetica, sans-serif'}}>Upload X-Rays/CT Scan images to our model</p>
+                            <p className="mb-0" style={{color:'#fff',fontSize:'16px',fontFamily:'Arial, Helvetica, sans-serif'}}>Upload Handwritten prescription image or PDF </p>
                         </div>
                     </div>
                     <div className="col-md-4 col-sm-12 mt-4 mt-md-0">
@@ -33,14 +33,14 @@ export default function Process() {
                              data-wow-delay="0.6s">
                             <div className="circle-effect"><img src={load} alt="fancybox"/></div>
                             <h5 className="mb-2" style={{color:'#fff',fontSize:'24px',fontFamily:'Arial, Helvetica, sans-serif'}}>Process</h5>
-                            <p className="mb-0" style={{color:'#fff',fontSize:'16px',fontFamily:'Arial, Helvetica, sans-serif'}}>Predict different disease using our AI Model</p>
+                            <p className="mb-0" style={{color:'#fff',fontSize:'16px',fontFamily:'Arial, Helvetica, sans-serif'}}>Extract data from prescription using our AI Model</p>
                         </div>
                     </div>
                     <div className="col-md-4 col-sm-12 mt-4 mt-md-0">
                         <div className="xamin-process xamin-circle wow fadeInUp text-center" data-wow-delay="0.6s">
                             <div className="circle-effect"><img src={report} alt="fancybox"/></div>
                             <h5 className="mb-2" style={{color:'#fff',fontSize:'24px',fontFamily:'Arial, Helvetica, sans-serif'}}>Report</h5>
-                            <p className="mb-0" style={{color:'#fff',fontSize:'16px',fontFamily:'Arial, Helvetica, sans-serif'}}>Send report to Doctor in real time</p>
+                            <p className="mb-0" style={{color:'#fff',fontSize:'16px',fontFamily:'Arial, Helvetica, sans-serif'}}>Save patient data to hospital database in real time</p>
                         </div>
                     </div>
                 </div>

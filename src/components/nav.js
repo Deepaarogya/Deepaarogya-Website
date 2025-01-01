@@ -34,7 +34,7 @@ export default function Nav() {
                             </div>
                             <div className="sub-main">
                                 <nav aria-label="breadcrumb">
-                                    <div className="blue-btn button"><a href="/login" style={{fontFamily:'Arial, Helvetica, sans-serif',fontWeight:'bold'}}>Login</a></div>
+                                    <div className="blue-btn button"><a href="https://doctordashboard.deepaarogya.com/login" style={{fontFamily:'Arial, Helvetica, sans-serif',fontWeight:'bold'}}>Login</a></div>
                                 </nav>
                             </div>
                         </nav>

@@ -27,7 +27,7 @@ export default function MissionVision() {
                                                 <div className="waves wave-2"></div>
                                                 <div className="waves wave-3"></div>
                                             </div>
-                                            <a href="https://www.youtube.com/watch?v=LHVqIYu3bjU"
+                                            <a href="https://www.youtube.com/watch?v=qpWkthTjXgE"
                                                className="iq-video popup-youtube"><i className="fa fa-play"></i></a>
                                         </div>
                                     </div>
