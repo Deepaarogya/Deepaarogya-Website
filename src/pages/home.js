@@ -5,10 +5,10 @@ import HeightBox from "../components/heightBox";
 import Stack from "@mui/material/Stack";
 import VideoSection from "../components/video";
 import ReadySection from "../components/ready_section";
-import Report from "../components/report";
+// import Report from "../components/report";
 import Process from "../components/process";
 import Heart from "../components/heart";
-import Chest from "../components/chest";
+// import Chest from "../components/chest";
 import LungCancer from "../components/lung_cancer";
 import {
     useTheme,
@@ -25,10 +25,10 @@ export default function Home() {
                 <HeightBox height={isMobile ? '400px' :'450px'}/>
                 <div className="main-content">
                     <Service/>
-                    <Chest/>
+                    {/* <Chest/> */}
                     <LungCancer/>
                     <Heart/>
-                    <Report/>
+                    {/* <Report/> */}
                     <ReadySection/>
                     <VideoSection/>
                     <Process/>
