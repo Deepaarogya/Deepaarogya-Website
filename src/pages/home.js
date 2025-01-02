@@ -14,6 +14,7 @@ import {
     useTheme,
     useMediaQuery,
 } from "@material-ui/core";
+import ImageSlider from "../components/imageSlider";
 
 export default function Home() {
     const theme = useTheme();
@@ -32,6 +33,7 @@ export default function Home() {
                     <ReadySection/>
                     <VideoSection/>
                     <Process/>
+                    <ImageSlider/>
                 </div>
             </Stack>
         </div>
