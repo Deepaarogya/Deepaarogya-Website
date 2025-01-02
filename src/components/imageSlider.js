@@ -3,10 +3,9 @@ import "../ImageSlider.css";
 import image1 from "../images/founder-hub.jpeg";
 import image2 from "../images/aws-startup.jpeg";
 import image3 from "../images/nvidia.jpeg";
-import image4 from "../images/eureka.jpeg";
-import image5 from "../images/bricss.jpeg";
-import image6 from "../images/venturee.jpeg";
-import image7 from "../images/tidess.jpeg";
+import image7 from "../images/bricss.png";
+import image6 from "../images/venturee.png";
+import image5 from "../images/tidess.png";
 
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,7 +14,7 @@ const ImageSlider = () => {
     { src: image1, alt: "Image 1" },
     { src: image2, alt: "Image 2" },
     { src: image3, alt: "Image 3" },
-    { src: image4, alt: "Image 4" },
+    
     { src: image5, alt: "Image 5" },
     { src: image6, alt: "Image 6" },
     { src: image7, alt: "Image 7" },
