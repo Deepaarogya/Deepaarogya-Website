@@ -183,7 +183,7 @@
 	.site-main .sf-content>.vc_row.wpb_row.vc_row-fluid, .content-area .site-main, .home.blog .content-area .site-main { padding: 75px 0 }
 	.overview-block-ptb { padding-top: 75px; }
 	header .main-header { z-index: 99; }
-	header .navbar .sub-main .blue-btn.button { right: 64%; position: relative; display: none}
+	header .navbar .sub-main .blue-btn.button { right: 64%; position: relative; display: block}
 	header .navbar-light .navbar-toggler {color: #ffffff;padding: 0.25rem .50rem; position: absolute; right: 0px; top: 6px; }
 	header.style-one .navbar-light .navbar-toggler { right: 0px; top: 20px; }
 	header .navbar-light .navbar-toggler:focus { outline: none }
@@ -430,7 +430,7 @@
 	.iq-coming .countdown li { width: 63px; height: 120px; margin: 0 10px; border: none; }
 	header.style-one .navbar-light .navbar-toggler { right: 0; }
 	.admin-bar header.style-one { top: 0; }
-	header .navbar .sub-main .blue-btn.button { position: relative; right: 64%; display: none }
+	header .navbar .sub-main .blue-btn.button { position: relative; right: 45%;  }
 	.custom-tab .nav.nav-pills li { width: 25%; }
 	.custom-tab .nav-pills .nav-link .tab-title { font-size: 14px; }
 	.custom-tab .nav.nav-pills[aria-orientation="vertical"] .nav-link .tab-title { font-size: 20px; }
@@ -543,7 +543,7 @@
 	.testimonial-box h4 span { display: inherit; margin: 0; }
 	.year-box { width: 140px; height: 120px; }
 	.consulting-blog .blog-details { padding: 15px 0 5px; }
-	header .navbar .sub-main .blue-btn.button { display: none; }
+	header .navbar .sub-main .blue-btn.button { }
 	.year-box span { font-size: 36px; }
 	.iq-blog-box .blog-title a h4 { font-size: 22px; }
 	.custom-tab .nav.nav-pills li { width: 100%; }
