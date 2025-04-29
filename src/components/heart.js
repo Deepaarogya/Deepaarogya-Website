@@ -1,34 +1,101 @@
-
-import service5 from "../images/heart-beating.gif";
+import React from "react";
+import service5 from "../images/customized-website.png";
 import HeightBox from "./heightBox";
 import Stack from "@mui/material/Stack";
+import { useTheme, useMediaQuery } from "@material-ui/core";
 
-export default function Heart(){
-    
-    return(
+export default function Heart() {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
+    return (
         <section className="aboutus-two-service">
             <div className="container">
-                <HeightBox height={70}/>
+                <HeightBox height={isMobile ? 30 : 70} />
                 <div className="row iq-how-it-works">
-                    <Stack direction={{ xs: 'column-reverse', sm: 'row' }}>
-                        <div className="fadeInUp col-sm-12 col-lg-6 col-md-6 wow">
+                    <Stack
+                        direction={isMobile ? "column" : "row"}
+                        spacing={isMobile ? 2 : 4}
+                        alignItems="center"
+                        justifyContent="center"
+                    >
+                        <div
+                            className="fadeInUp col-sm-12 col-lg-6 col-md-6 wow"
+                            style={{
+                                textAlign: isMobile ? "center" : "left",
+                                marginBottom: isMobile ? "20px" : "0",
+                            }}
+                        >
                             <img
                                 className="single_image-img"
                                 src={service5}
-                                style={{borderRadius:60}}
-                                alt={'human heart'}
+                                style={{
+                                    borderRadius: "10px",
+                                    width: isMobile ? "100%" : "90%",
+                                    maxWidth: "600px",
+                                    height: "auto",
+                                }}
+                                alt="Customised Clinical Website"
                             />
                         </div>
-                        <div className=" fadeInUp  col-sm-12 col-lg-6 col-md-6 wow align-items-center">
-                            <div className="title-box wow fadeInUp text-left">
-                                <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px',fontFamily:'Arial, Helvetica, sans-serif'}}>Cough acoustic detection</h2>
-                                <p style={{color:'#fff',fontSize:'18px',fontFamily:'Arial, Helvetica, sans-serif'}}>Our AI algorithms can analyze cough sounds to detect signs of disease. This can be used to identify respiratory diseases, such as pneumonia and tuberculosis. Artificial Intelligence (AI) is being used to analyze cough sounds to detect and diagnose diseases. By using machine learning algorithms, 
-                                AI systems can detect specific acoustic patterns in coughs that are associated with different respiratory diseases. The technology has the potential to provide a rapid, non-invasive,
-                                 and cost-effective method of disease screening, particularly in low-resource settings.<br/>&nbsp;&nbsp;&nbsp;&nbsp;
-                                 AI-powered cough detection systems can be integrated into mobile applications, wearable devices, and even smart speakers, making it accessible to a wide range of users. As a result,
-                                  cough analysis using AI has emerged as a promising tool for early disease detection and prevention.</p>
+                        <div
+                            className="fadeInUp col-sm-12 col-lg-6 col-md-6 wow align-items-center"
+                            style={{
+                                textAlign: isMobile ? "center" : "left",
+                            }}
+                        >
+                            <div className="title-box wow fadeInUp">
+                                <h2
+                                    style={{
+                                        color: "#fff",
+                                        fontSize: isMobile ? "28px" : "42px",
+                                        lineHeight: isMobile ? "34px" : "45px",
+                                        fontFamily: "Arial, Helvetica, sans-serif",
+                                    }}
+                                >
+                                    Customised Clinical Website
+                                </h2>
+                                <p
+                                    style={{
+                                        color: "#fff",
+                                        fontSize: isMobile ? "14px" : "18px",
+                                        fontFamily: "Arial, Helvetica, sans-serif",
+                                        lineHeight: isMobile ? "20px" : "28px",
+                                    }}
+                                >
+                                    We will design a personalised custom website for your clinic. Sell your medical product/services to your customers.
+                                </p>
+                                <p
+                                    style={{
+                                        color: "#fff",
+                                        fontSize: isMobile ? "14px" : "18px",
+                                        fontFamily: "Arial, Helvetica, sans-serif",
+                                        lineHeight: isMobile ? "20px" : "28px",
+                                    }}
+                                >
+                                    <strong>Zero Deduction:</strong> We will not charge any money for appointment booking, new development changes in the website, or any other services.
+                                </p>
+                                <p
+                                    style={{
+                                        color: "#fff",
+                                        fontSize: isMobile ? "14px" : "18px",
+                                        fontFamily: "Arial, Helvetica, sans-serif",
+                                        lineHeight: isMobile ? "20px" : "28px",
+                                    }}
+                                >
+                                    <strong>Post-Consultation & Follow-Ups:</strong> Tele Consultations, Appointments, Follow-Up reminders, E-Pharmacy, E-Diagnostics.
+                                </p>
+                                <p
+                                    style={{
+                                        color: "#fff",
+                                        fontSize: isMobile ? "14px" : "18px",
+                                        fontFamily: "Arial, Helvetica, sans-serif",
+                                        lineHeight: isMobile ? "20px" : "28px",
+                                    }}
+                                >
+                                    <strong>Increase Digital Footprint:</strong> Expand your reach and online visibility. WhatsApp Marketing, Email Marketing, Google My Business.
+                                </p>
                             </div>
-                           
                         </div>
                     </Stack>
                 </div>

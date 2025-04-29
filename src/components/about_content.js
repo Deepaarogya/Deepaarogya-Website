@@ -1,4 +1,4 @@
-import service4 from "../images/04.png";
+import service4 from "../images/custom_EMR.png";
 import service5 from "../images/02_1.png";
 import HeightBox from "./heightBox";
 import Stack from "@mui/material/Stack";
@@ -14,9 +14,7 @@ export default function AboutContent() {
                             <h2 style={{color:'#fff',fontSize:'42px',lineHeight:'45px',fontFamily:'Arial, Helvetica, sans-serif'}}>About Us</h2>
                             <p style={{color:'#fff',fontSize:'18px',fontFamily:'Arial, Helvetica, sans-serif'}}>At our company, we have assembled a dedicated team of Data Scientists, Engineers, and 
                             Doctors who are committed to our mission of reducing the incidence of deaths resulting from unknown diseases. Leveraging the power of artificial intelligence, we have developed
-                             a solution that can predict the onset of various diseases at an early stage based on a patient's X-ray, CT Scan, and MRI reports. Our AI technology allows us to
-                              provide real-time disease detection reports to doctors, empowering them to make informed decisions on patient condition, particularly in cases of Heart-attack, Cancer, and
-                               Chest-related diseases such as Covid, Tuberculosis, and Viral Pneumonia.
+                             a solution that can predict the onset of various diseases at an early stage based on a patient's history and symptoms.
                              <br/>&nbsp;&nbsp;&nbsp;&nbsp;Our ultimate goal is to make a significant contribution to reducing the number of fatalities caused by unknown diseases worldwide. 
                              With our innovative solutions, we strive to save as many lives as possible.</p>
                         </div>

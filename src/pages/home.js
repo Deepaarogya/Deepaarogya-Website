@@ -10,33 +10,33 @@ import Process from "../components/process";
 import Heart from "../components/heart";
 // import Chest from "../components/chest";
 import LungCancer from "../components/lung_cancer";
-import {
-    useTheme,
-    useMediaQuery,
-} from "@material-ui/core";
+import { useTheme, useMediaQuery } from "@material-ui/core";
 import ImageSlider from "../components/imageSlider";
 
 export default function Home() {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
     return (
-        <div style={{background:'#07071C'}}>
-            <Stack direction={'column'}>
-                <Header/>
-                <HeightBox height={isMobile ? '400px' :'450px'}/>
+        <div style={{ background: "#07071C" }}>
+            <Stack direction={"column"}>
+                <Header />
+                <HeightBox height={isMobile ? "400px" : "450px"} />
                 <div className="main-content">
-                    <Service/>
+                    
                     {/* <Chest/> */}
-                    <LungCancer/>
-                    <Heart/>
+
+                    <Service />
+                    <Heart /> 
+                    <LungCancer />
+                    
                     {/* <Report/> */}
-                    <ReadySection/>
-                    <VideoSection/>
-                    <Process/>
-                    <ImageSlider/>
+                    <ReadySection />
+                    <VideoSection /> 
+                    <Process />
+                    <ImageSlider />
                 </div>
             </Stack>
         </div>
-
     );
 }
