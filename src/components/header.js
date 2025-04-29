@@ -5,46 +5,50 @@ import Typography from '@mui/material/Typography';
 import AiBg from '../images/ai_banner.jpg';
 import Nav from "./nav";
 import React from "react";
-import {useMediaQuery, useTheme} from "@material-ui/core";
+import { useMediaQuery, useTheme } from "@material-ui/core";
 
-export default  function Header(){
+export default function Header() {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
-    var bgStyle = {
-        backgroundImage:`url(${AiBg})`,
-        backgroundSize:'cover',
+    const bgStyle = {
+        backgroundImage: `url(${AiBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         position: 'absolute',
         top: 0,
         left: 0,
-        height:'120%',
+        height: isSmallScreen ? '100%' : '120%',
         minWidth: '100%',
     };
 
-    var style = {
+    const style = {
         centerText: {
             color: white,
-            lineHeight: isMobile ? '40px' :'67px',
-            letterSpacing:' 0px',
-            fontWeight:' 700',
-            fontFamily:'Arial, Helvetica, sans-serif',
-            fontSize: isMobile ? '35px' : '45px',
+            lineHeight: isMobile ? '40px' : '67px',
+            letterSpacing: '0px',
+            fontWeight: '700',
+            fontFamily: 'Arial, Helvetica, sans-serif',
+            fontSize: isSmallScreen ? '28px' : isMobile ? '35px' : '45px',
+            textAlign: isSmallScreen ? 'center' : 'left',
         },
-    }
+        container: {
+            marginTop: isSmallScreen ? 10 : isMobile ? 14 : 30,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: isSmallScreen ? 'center' : 'start',
+            padding: isSmallScreen ? '20px' : '0',
+        },
+    };
 
     return (
         <div style={bgStyle}>
-             <Container component="main">
-                <Box
-                sx={{
-                    marginTop: isMobile  ? 14 : 30,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'start',
-
-                }}
-                >
-                    <Typography style={style.centerText}>Leveraging AI innovations for Life Changing Solutions in Healthcare</Typography>
+            <Container component="main">
+                <Box sx={style.container}>
+                    <Typography style={style.centerText}>
+                        Leveraging AI innovations for Life Changing Solutions in Healthcare
+                    </Typography>
                 </Box>
             </Container>
         </div>
