@@ -47,7 +47,7 @@ export default function Header() {
             <Container component="main">
                 <Box sx={style.container}>
                     <Typography style={style.centerText}>
-                        Leveraging AI innovations for Life Changing Solutions in Healthcare
+                        We are helping Clinician to build their own personal Healthcare Brand
                     </Typography>
                 </Box>
             </Container>

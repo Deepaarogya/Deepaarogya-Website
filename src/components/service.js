@@ -72,6 +72,9 @@ export default function Service() {
                                 style={{
                                     ...imageStyle,
                                     marginBottom: '20px', // Add space below the image
+                                    height: isMobile ? 'auto' : '400px', // Set height for desktop view
+                                    width: isMobile ? '100%' : '100%', // Ensure the width remains consistent
+                                    objectFit: 'contain', // Maintain aspect ratio without cropping
                                 }}
                             />
                         </div>
