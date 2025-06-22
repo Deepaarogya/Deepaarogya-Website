@@ -138,8 +138,8 @@ export default function SendMessage() {
                                 <div className="service-detail">
                                     <h4 className="mb-2" style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}>Phone support</h4>
                                     <ul className="list-inline mb-0">
-                                        <li><a href="tel:+0123456789" style={{color:'#fff'}}> +918979523908</a></li>
-                                        <li><a href="tel:+0123456789" style={{color:'#fff'}}> +919818810837</a></li>
+                                        <li><a href="tel:+918979523908" style={{color:'#fff'}}> +918979523908</a></li>
+                                        <li><a href="tel:+918383064233" style={{color:'#fff'}}> +918383064233</a></li>
                                     </ul>
                                 </div>
                             </div>
