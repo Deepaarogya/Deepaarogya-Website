@@ -27,7 +27,7 @@ export default function Footer() {
                                 <ul className="menu">
                                     <li className="menu-item"><a href="/about-us" style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}>About Us</a></li>
                                     <li className="menu-item"><a href="/contact-us" style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}>Contact Us</a></li>
-                                    <li className="menu-item"><a href="/demo" style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}>Demo</a></li>
+                                    <li className="menu-item"><a href="/contact-us" style={{color:'#fff',fontFamily:'Arial, Helvetica, sans-serif'}}>Demo</a></li>
                                 </ul>
                             </div>
                         </div>
