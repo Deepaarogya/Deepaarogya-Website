@@ -32,9 +32,9 @@ export default function Service() {
                             <div className="service-box d-inherit p-4 my-3 wow fadeInUp text-center" style={{ background: '#121228' }}>
                                 <img className="fancy-list-img" src={service1} alt="fancy-list" />
                                 <div className="service-detail align-self-center">
-                                    <h4 className="mb-2" style={{ color: '#fff' }}>Handwriiten Prescription</h4>
+                                    <h4 className="mb-2" style={{ color: '#fff' }}>AI Audio Conversation </h4>
                                     <p style={{ color: '#fff', fontFamily: 'Arial, Helvetica, sans-serif', letterSpacing: '0.5px' }}>
-                                        Illegible handwriting causes medication errors, while manual prescription entry is inefficient. Lack of standard formats leads to inconsistencies and errors. Paper-based systems are environmentally harmful and risk data loss, threatening patient safety and operational efficiency. Digital solutions ensure accuracy, sustainability, and reliability, addressing these critical challenges effectively.
+                                        Illegible handwriting causes medication errors, while manual prescription entry is inefficient. Our AI-based Audio model records doctor-patient conversations and extracts all the information in a prescribed format, and generates a patient summary from it.
                                     </p>
                                 </div>
                             </div>
